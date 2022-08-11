@@ -29,8 +29,8 @@
                 <div class="row justify-content-center no-gutters">
                     <div class="col-lg-4 col-md-5 col-12">
                         <div class="content-top-agile p-10">
-                            <h2 class="text-white">Get started with Us</h2>
-                            <p class="text-white-50">Sign in to start your session</p>
+                            <h2 class="text-white">TMC Hitght School</h2>
+                            <p class="text-white-50">Sign in to start session</p>
                         </div>
                         <div class="p-30 rounded30 box-shadowed b-2 b-dashed">
                             <form method="POST" action="{{ route('login') }}">
@@ -61,14 +61,14 @@
                                     <div class="col-6">
                                         <div class="checkbox text-white">
                                             <input type="checkbox" id="basic_checkbox_1">
-                                            <label for="basic_checkbox_1">Remember Me</label>
+                                            <label for="basic_checkbox_1">Remember me</label>
                                         </div>
                                     </div>
                                     <!-- /.col -->
                                     <div class="col-6">
                                         <div class="fog-pwd text-right">
                                             <a href="{{ route('password.request') }}" class="text-white hover-info"><i
-                                                    class="ion ion-locked"></i> Forgot pwd?</a><br>
+                                                    class="ion ion-locked"></i> Forgot password?</a><br>
                                         </div>
                                     </div>
                                     <!-- /.col -->
