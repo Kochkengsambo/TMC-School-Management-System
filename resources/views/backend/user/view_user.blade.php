@@ -1,10 +1,9 @@
 @extends('admin.admin_master')
 @section('admin')
-
-<div class="content-wrapper">
-    <div class="container-full">
-        <!-- Content Header (Page header) -->
-        {{-- <div class="content-header">
+    <div class="content-wrapper">
+        <div class="container-full">
+            <!-- Content Header (Page header) -->
+            {{-- <div class="content-header">
             <div class="d-flex align-items-center">
                 <div class="mr-auto">
                     <h3 class="page-title">Data Tables</h3>
@@ -22,64 +21,65 @@
             </div>
         </div> --}}
 
-        <!-- Main content -->
-        <section class="content">
-            <div class="row">
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
 
-                <div class="col-12">
+                    <div class="col-12">
 
-                    <div class="box">
-                        <div class="box-header with-border">
-                            <h3 class="box-title">User List</h3>
-                            <a href="{{ route('user.add') }}" style="float: right" class="btn btn-primary mb-5">Add User</a>
-                        </div>
-                        <!-- /.box-header -->
-                        <div class="box-body">
-                            <div class="table-responsive">
-                                <table id="example1" class="table table-bordered table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th width="5%">SL</th>
-                                            <th>Role</th>
-                                            <th>Name</th>
-                                            <th>Email</th>
-                                            <th width="20%">Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach ($allData as $key => $user)
-
-                                        <tr>
-                                            <td>{{ $key+1 }}</td>
-                                            <td>{{ $user->usertype }}</td>
-                                            <td>{{ $user->name }}</td>
-                                            <td>{{ $user->email }}</td>
-                                            <td>
-                                                <a href="" class="btn btn-info mb-5"><i class="mdi mdi-account-edit"></i></a>
-                                                <a href="" class="btn btn-danger mb-5"><i class="mdi mdi-account-remove"></i></a>
-                                            </td>
-                                        </tr>
-
-                                        @endforeach
-
-                                    </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <th>SL</th>
-                                            <th>Role</th>
-                                            <th>Name</th>
-                                            <th>Email</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </tfoot>
-                                </table>
+                        <div class="box">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">User List</h3>
+                                <a href="{{ route('user.add') }}" style="float: right" class="btn btn-rounded btn-primary mb-5">Add
+                                    User</a>
                             </div>
-                        </div>
-                        <!-- /.box-body -->
-                    </div>
-                    <!-- /.box -->
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="table-responsive">
+                                    <table id="example1" class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th width="5%">SL</th>
+                                                <th>Role</th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th width="15%">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach ($allData as $key => $user)
+                                                <tr>
+                                                    <td>{{ $key + 1 }}</td>
+                                                    <td>{{ $user->usertype }}</td>
+                                                    <td>{{ $user->name }}</td>
+                                                    <td>{{ $user->email }}</td>
+                                                    <td>
+                                                        <a href="{{ route('users.edit',$user->id) }}" class="btn btn-info mb-5"><i
+                                                                class="mdi mdi-account-edit"></i></a>
+                                                        <a href="{{ route('users.delete',$user->id) }}" class="btn btn-danger mb-5" id="delete"><i
+                                                                class="mdi mdi-account-remove"></i></a>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
 
-                    {{-- <div class="box">
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>SL</th>
+                                                <th>Role</th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                        <!-- /.box -->
+
+                        {{-- <div class="box">
                         <div class="box-header with-border">
                             <h3 class="box-title">Hover Export Data Table</h3>
                             <h6 class="box-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
@@ -572,15 +572,14 @@
                         </div>
                         <!-- /.box-body -->
                     </div> --}}
-                    <!-- /.box -->
+                        <!-- /.box -->
+                    </div>
+                    <!-- /.col -->
                 </div>
-                <!-- /.col -->
-            </div>
-            <!-- /.row -->
-        </section>
-        <!-- /.content -->
+                <!-- /.row -->
+            </section>
+            <!-- /.content -->
 
+        </div>
     </div>
-</div>
-
 @endsection

@@ -17,10 +17,45 @@
     <!-- Style-->
     <link rel="stylesheet" href="{{ asset('backend/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/css/skin_color.css') }}">
+    <style>
+        .background-radial-gradient {
+            background-color: hsl(218, 41%, 15%);
+            background-image: radial-gradient(650px circle at 0% 0%,
+                    hsl(218, 41%, 35%) 15%,
+                    hsl(218, 41%, 30%) 35%,
+                    hsl(218, 41%, 20%) 75%,
+                    hsl(218, 41%, 19%) 80%,
+                    transparent 100%),
+                radial-gradient(1250px circle at 100% 100%,
+                    hsl(218, 41%, 45%) 15%,
+                    hsl(218, 41%, 30%) 35%,
+                    hsl(218, 41%, 20%) 75%,
+                    hsl(218, 41%, 19%) 80%,
+                    transparent 100%);
+        }
 
+        #radius-shape-1 {
+            height: 220px;
+            width: 220px;
+            top: -60px;
+            right: -130px;
+            background: radial-gradient(#44006b, #ad1fff);
+            overflow: hidden;
+        }
+
+        #radius-shape-2 {
+            border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+            bottom: -60px;
+            left: -110px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(#44006b, #ad1fff);
+            overflow: hidden;
+        }
+    </style>
 </head>
-
-<body class="hold-transition theme-primary bg-gradient-primary">
+{{-- <body class="hold-transition theme-primary bg-gradient-primary"> --}}
+<body class="background-radial-gradient">
 
     <div class="container h-p100">
         <div class="row align-items-center justify-content-md-center h-p100">
@@ -43,7 +78,7 @@
                                         </div>
                                         <input type="email" id="email" name="email"
                                             class="form-control pl-15 bg-transparent text-white plc-white"
-                                            placeholder="Username">
+                                            placeholder="Username" required="">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -54,7 +89,7 @@
                                         </div>
                                         <input type="password" id="password" name="password"
                                             class="form-control pl-15 bg-transparent text-white plc-white"
-                                            placeholder="Password">
+                                            placeholder="Password" required="">
                                     </div>
                                 </div>
                                 <div class="row">
@@ -80,7 +115,7 @@
                             </form>
 
                             <div class="text-center text-white">
-                                <p class="mt-20">- Sign With -</p>
+                                <p class="mt-20">-- Sign With --</p>
                                 <p class="gap-items-2 mb-20">
                                     <a class="btn btn-social-icon btn-round btn-outline btn-white" href="#"><i
                                             class="fa fa-facebook"></i></a>
@@ -94,8 +129,8 @@
                             </div>
 
                             <div class="text-center">
-                                <p class="mt-15 mb-0 text-white">Don't have an account? <a href="{{ route('register') }}"
-                                        class="text-info ml-5">Sign Up</a></p>
+                                <p class="mt-15 mb-0 text-white">Don't have an account? <a
+                                        href="{{ route('register') }}" class="text-info ml-5">Sign Up</a></p>
                             </div>
                         </div>
                     </div>
@@ -104,6 +139,10 @@
         </div>
     </div>
 
+    {{-- Style --}}
+    {{-- <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+    <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div> --}}
+    {{-- Style --}}
 
     <!-- Vendor JS -->
     <script src="{{ asset('backend/js/vendors.min.js') }}"></script>
