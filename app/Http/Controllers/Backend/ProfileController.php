@@ -10,21 +10,24 @@ use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
-    public function ProfileView(){
+    public function ProfileView()
+    {
         $id = Auth::user()->id;
         $user = User::find($id);
 
-        return view('backend.user.view_profile',compact('user'));
+        return view('backend.user.view_profile', compact('user'));
     }
 
-    public function ProfileEdit(){
+    public function ProfileEdit()
+    {
         $id = Auth::user()->id;
         $editData = User::find($id);
 
-        return view('backend.user.edit_profile',compact('editData'));
+        return view('backend.user.edit_profile', compact('editData'));
     }
 
-    public function ProfileStore(Request $request){
+    public function ProfileStore(Request $request)
+    {
         $data = User::find(Auth::user()->id);
         $data->name = $request->name;
         $data->email = $request->email;
@@ -32,18 +35,23 @@ class ProfileController extends Controller
         $data->address = $request->address;
         $data->gender = $request->gender;
 
-        if($request->file('image')){
+        if ($request->file('image')) {
             $file = $request->file('image');
-            @unlink(public_path('upload/user_images/'.$data->image));
-            $filename = date('YmdHi').$file->getClientOriginalName();
-            $file->move(public_path('upload/user_images'),$filename);
+            @unlink(public_path('upload/user_images/' . $data->image));
+            $filename = date('YmdHi') . $file->getClientOriginalName();
+            $file->move(public_path('upload/user_images'), $filename);
             $data['image'] = $filename;
         }
         $data->save();
-        return redirect()->route('user.view')->with('success', 'User Profile Updated Successfully');
+        $notification = array(
+            'message' => "User Updated Successfully",
+            'alert-type' => 'success'
+        );
+        return redirect()->route('user.view')->with($notification);
     }
 
-    public function PasswordView(){
+    public function PasswordView()
+    {
 
         return view('backend.user.edit_password');
     }
