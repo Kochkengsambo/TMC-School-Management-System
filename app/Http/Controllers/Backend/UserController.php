@@ -80,7 +80,7 @@ class UserController extends Controller
         $user->delete();
         $notification = array(
             'message' => "User Deleted Successfully",
-            'alert-type' => 'success'
+            'alert-type' => 'info'
          );
         return redirect()->route('user.view')->with($notification);
     }

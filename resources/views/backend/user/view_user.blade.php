@@ -20,7 +20,6 @@
                 </div>
             </div>
         </div> --}}
-
             <!-- Main content -->
             <section class="content">
                 <div class="row">
@@ -30,7 +29,8 @@
                         <div class="box">
                             <div class="box-header with-border">
                                 <h3 class="box-title">User List</h3>
-                                <a href="{{ route('user.add') }}" style="float: right" class="btn btn-rounded btn-primary mb-5">Add
+                                <a href="{{ route('user.add') }}" style="float: right"
+                                    class="btn btn-rounded btn-primary mb-5">Add
                                     User</a>
                             </div>
                             <!-- /.box-header -->
@@ -39,39 +39,41 @@
                                     <table id="example1" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
-                                                <th width="5%">SL</th>
+                                                <th class="text-center" width="5%">SL</th>
                                                 <th>Role</th>
                                                 <th>Name</th>
                                                 <th>Email</th>
-                                                <th width="15%">Action</th>
+                                                <th class="text-center" width="15%">Action</th>
                                             </tr>
                                         </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th class="text-center">SL</th>
+                                                <th>Role</th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th class="text-center">Action</th>
+                                            </tr>
+                                        </tfoot>
                                         <tbody>
                                             @foreach ($allData as $key => $user)
                                                 <tr>
-                                                    <td>{{ $key + 1 }}</td>
+                                                    <td class="text-center">{{ $key + 1 }}</td>
                                                     <td>{{ $user->usertype }}</td>
                                                     <td>{{ $user->name }}</td>
                                                     <td>{{ $user->email }}</td>
-                                                    <td>
-                                                        <a href="{{ route('users.edit',$user->id) }}" class="btn btn-info mb-5"><i
+                                                    <td class="text-center">
+                                                        <a href="{{ route('users.edit', $user->id) }}"
+                                                            class="btn btn-info mb-5"><i
                                                                 class="mdi mdi-account-edit"></i></a>
-                                                        <a href="{{ route('users.delete',$user->id) }}" class="btn btn-danger mb-5" id="delete"><i
+                                                        <a href="{{ route('users.delete', $user->id) }}"
+                                                            class="btn btn-danger mb-5" id="delete"><i
                                                                 class="mdi mdi-account-remove"></i></a>
                                                     </td>
                                                 </tr>
                                             @endforeach
 
                                         </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <th>SL</th>
-                                                <th>Role</th>
-                                                <th>Name</th>
-                                                <th>Email</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </tfoot>
                                     </table>
                                 </div>
                             </div>

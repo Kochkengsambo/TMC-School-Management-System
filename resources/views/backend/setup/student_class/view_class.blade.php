@@ -39,35 +39,49 @@
                                     <table id="example1" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
-                                                <th width="5%">SL</th>
+                                                <th class="text-center" width="5%">SL</th>
                                                 <th>Name</th>
-                                                <th width="15%">Action</th>
+                                                <th class="text-center" width="15%">Action</th>
                                             </tr>
                                         </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th class="text-center">SL</th>
+                                                <th>Name</th>
+                                                <th class="text-center">Action</th>
+                                            </tr>
+                                        </tfoot>
                                         <tbody>
                                             @foreach ($allData as $key => $student)
                                                 <tr>
-                                                    <td>{{ $key + 1 }}</td>
+                                                    <td class="text-center">{{ $key + 1 }}</td>
                                                     <td>{{ $student->name }}</td>
-                                                    <td>
-                                                        <a href="{{ route('users.edit', $student->id) }}"
+                                                    <td class="text-center">
+                                                        <a href="{{ route('student.class.edit', $student->id) }}"
                                                             class="btn btn-info mb-5"><i
                                                                 class="mdi mdi-account-edit"></i></a>
-                                                        <a href="{{ route('users.delete', $student->id) }}"
+                                                        <a href="{{ route('student.class.delete', $student->id) }}"
                                                             class="btn btn-danger mb-5" id="delete"><i
                                                                 class="mdi mdi-account-remove"></i></a>
+
+                                                        {{-- <select value="Action">
+                                                            <option value="">
+                                                                <a href="{{ route('student.class.edit', $student->id) }}"
+                                                                    class="btn btn-info mb-5"><i
+                                                                        class="mdi mdi-account-edit"></i></a>
+                                                            </option>
+                                                            <option value="" selected="selected">
+                                                                <a href="{{ route('student.class.delete', $student->id) }}"
+                                                                    class="btn btn-danger mb-5" id="delete"><i
+                                                                        class="mdi mdi-account-remove"></i></a>
+                                                            </option>
+                                                          </select> --}}
+
                                                     </td>
                                                 </tr>
                                             @endforeach
 
                                         </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <th>SL</th>
-                                                <th>Name</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </tfoot>
                                     </table>
                                 </div>
                             </div>
