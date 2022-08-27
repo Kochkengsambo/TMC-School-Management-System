@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\ProfileController;
+use App\Http\Controllers\Backend\Setup\StudentYearController;
 use App\Http\Controllers\Backend\Setup\StudentClassController;
 
 /*
@@ -62,5 +63,11 @@ Route::prefix('setups')->group(function () {
     Route::get('student/class/edit/{id}', [StudentClassController::class, 'StudentClassEdit'])->name('student.class.edit');
     Route::post('student/class/update/{id}', [StudentClassController::class, 'StudentClassUpdate'])->name('update.students.class');
     Route::get('student/class/delete/{id}', [StudentClassController::class, 'StudentClassDelete'])->name('student.class.delete');
-
+    // Student Year Route
+    Route::get('student/year/view', [StudentYearController::class, 'ViewYear'])->name('student.year.view');
+    Route::get('student/year/add', [StudentYearController::class, 'StudentYearAdd'])->name('student.year.add');
+    Route::post('student/year/store', [StudentYearController::class, 'StudentYearStore'])->name('store.students.year');
+    Route::get('student/year/edit/{id}', [StudentYearController::class, 'StudentYearEdit'])->name('student.year.edit');
+    Route::post('student/year/update/{id}', [StudentYearController::class, 'StudentYearUpdate'])->name('update.students.year');
+    Route::get('student/year/delete/{id}', [StudentYearController::class, 'StudentYearDelete'])->name('student.year.delete');
 });

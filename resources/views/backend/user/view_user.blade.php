@@ -30,8 +30,8 @@
                             <div class="box-header with-border">
                                 <h3 class="box-title">User List</h3>
                                 <a href="{{ route('user.add') }}" style="float: right"
-                                    class="btn btn-rounded btn-primary mb-5">Add
-                                    User</a>
+                                    class="btn btn-rounded btn-primary mb-5"><i class="mdi mdi-library-plus"></i>
+                                    Add User</a>
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body">

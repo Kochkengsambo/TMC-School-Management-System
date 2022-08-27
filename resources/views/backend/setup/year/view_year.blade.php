@@ -29,10 +29,12 @@
 
                         <div class="box">
                             <div class="box-header with-border">
-                                <h3 class="box-title">Student Class List</h3>
-                                <a href="{{ route('student.class.add') }}" style="float: right"
+                                <h3 class="box-title">Student Year List</h3>
+                                <a href="{{ route('student.year.add') }}" style="float: right"
                                     class="btn btn-rounded btn-primary mb-5">
-                                    <i class="mdi mdi-library-plus"></i> Add Student Class</a>
+                                    <i class="mdi mdi-library-plus"></i>
+                                    <span>Add Student Year</span>
+                                </a>
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body">
@@ -53,20 +55,20 @@
                                             </tr>
                                         </tfoot>
                                         <tbody>
-                                            @foreach ($allData as $key => $student)
+                                            @foreach ($allData as $key => $year)
                                                 <tr>
                                                     <td class="text-center">{{ $key + 1 }}</td>
-                                                    <td>{{ $student->name }}</td>
+                                                    <td>{{ $year->name }}</td>
                                                     <td class="text-center">
-                                                        <a href="{{ route('student.class.edit', $student->id) }}"
+                                                        <a href="{{ route('student.year.edit', $year->id) }}"
                                                             class="btn btn-info mb-5"><i
                                                                 class="mdi mdi-account-edit"></i></a>
-                                                        <a href="{{ route('student.class.delete', $student->id) }}"
+                                                        <a href="{{ route('student.year.delete', $year->id) }}"
                                                             class="btn btn-danger mb-5" id="delete"><i
                                                                 class="mdi mdi-account-remove"></i></a>
 
 
-                                                            </td>
+                                                    </td>
                                                 </tr>
                                             @endforeach
 
