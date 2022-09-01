@@ -32,7 +32,7 @@
                                 <h3 class="widget-user-username">User Name : {{ $user->name }}</h3>
 
                                 <a href="{{ route('profile.edit') }}" style="float: right"
-                                    class="btn btn-rounded btn-primary mb-5">Edit Profile</a>
+                                    class="btn btn-primary mb-5">Edit Profile</a>
 
                                 <h6 class="widget-user-desc">User Type : {{ $user->usertype }}</h6>
                                 <h6 class="widget-user-desc">User Email : {{ $user->email }}</h6>

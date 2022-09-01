@@ -30,10 +30,10 @@
                         <div class="box">
                             <div class="box-header with-border">
                                 <h3 class="box-title">Student Fee Category List</h3>
-                                <a href="{{ route('student.group.add') }}" style="float: right"
-                                    class="btn btn-rounded btn-primary mb-5">
+                                <a href="{{ route('fee.category.add') }}" style="float: right"
+                                    class="btn btn-primary mb-5">
                                     <i class="mdi mdi-library-plus"></i>
-                                    <span>Add Fee Category/span>
+                                    <span>Add Fee Category</span>
                                 </a>
                             </div>
                             <!-- /.box-header -->
@@ -60,10 +60,10 @@
                                                     <td class="text-center">{{ $key + 1 }}</td>
                                                     <td>{{ $fee->name }}</td>
                                                     <td class="text-center">
-                                                        <a href="{{ route('student.group.edit', $fee->id) }}"
+                                                        <a href="{{ route('fee.category.edit', $fee->id) }}"
                                                             class="btn btn-info mb-5"><i
                                                                 class="mdi mdi-account-edit"></i></a>
-                                                        <a href="{{ route('student.group.delete', $fee->id) }}"
+                                                        <a href="{{ route('fee.category.delete', $fee->id) }}"
                                                             class="btn btn-danger mb-5" id="delete"><i
                                                                 class="mdi mdi-account-remove"></i></a>
 

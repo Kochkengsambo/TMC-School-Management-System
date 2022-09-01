@@ -29,11 +29,11 @@
 
                         <div class="box">
                             <div class="box-header with-border">
-                                <h3 class="box-title">Student Group List</h3>
-                                <a href="{{ route('student.group.add') }}" style="float: right"
+                                <h3 class="box-title">Student Fee Amount List</h3>
+                                <a href="{{ route('fee.amount.add') }}" style="float: right"
                                     class="btn btn-primary mb-5">
                                     <i class="mdi mdi-library-plus"></i>
-                                    <span>Add Student Group</span>
+                                    <span>Add Fee Amount</span>
                                 </a>
                             </div>
                             <!-- /.box-header -->
@@ -43,27 +43,27 @@
                                         <thead>
                                             <tr>
                                                 <th class="text-center" width="5%">SL</th>
-                                                <th>Name</th>
+                                                <th>Fee Category</th>
                                                 <th class="text-center" width="15%">Action</th>
                                             </tr>
                                         </thead>
                                         <tfoot>
                                             <tr>
                                                 <th class="text-center">SL</th>
-                                                <th>Name</th>
+                                                <th>Fee Category</th>
                                                 <th class="text-center">Action</th>
                                             </tr>
                                         </tfoot>
                                         <tbody>
-                                            @foreach ($allData as $key => $group)
+                                            @foreach ($allData as $key => $amount)
                                                 <tr>
                                                     <td class="text-center">{{ $key + 1 }}</td>
-                                                    <td>{{ $group->name }}</td>
+                                                    <td>{{ $amount->fee_category_amount }}</td>
                                                     <td class="text-center">
-                                                        <a href="{{ route('student.group.edit', $group->id) }}"
+                                                        <a href="{{ route('fee.category.edit', $amount->id) }}"
                                                             class="btn btn-info mb-5"><i
                                                                 class="mdi mdi-account-edit"></i></a>
-                                                        <a href="{{ route('student.group.delete', $group->id) }}"
+                                                        <a href="{{ route('fee.category.delete', $amount->id) }}"
                                                             class="btn btn-danger mb-5" id="delete"><i
                                                                 class="mdi mdi-account-remove"></i></a>
 

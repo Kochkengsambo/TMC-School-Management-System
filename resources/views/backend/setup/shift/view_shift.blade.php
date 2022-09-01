@@ -31,7 +31,7 @@
                             <div class="box-header with-border">
                                 <h3 class="box-title">Student Shift List</h3>
                                 <a href="{{ route('student.shift.add') }}" style="float: right"
-                                    class="btn btn-rounded btn-primary mb-5">
+                                    class="btn btn-primary mb-5">
                                     <i class="mdi mdi-library-plus"></i>
                                     <span>Add Student Shift</span>
                                 </a>
