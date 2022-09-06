@@ -35,17 +35,56 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <h5>Fee Category Name <span class="text-danger">*</span></h5>
+                                                <h5>Fee Category<span class="text-danger">*</span></h5>
                                                 <div class="controls">
-                                                    <input type="text" name="name" class="form-control">
-                                                    @error('name')
-                                                        <span class="text-danger">{{ $message }}</span>
-                                                    @enderror
+                                                    <select name="fee_category_amount" required=""
+                                                        class="form-control">
+                                                        <option value="" selected="" disabled="">Select
+                                                            Fee Category</option>
+                                                            @foreach ($fee_categories as $category)
+                                                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                                            @endforeach
+
+                                                    </select>
+                                                    <div class="help-block"></div>
                                                 </div>
                                             </div>
+
+                                            <div class="row">
+                                                    <div class="col-md-5">
+                                                        <div class="form-group">
+                                                            <h5>Student Class<span class="text-danger">*</span></h5>
+                                                            <div class="controls">
+                                                                <select name="class_id[]" required=""
+                                                                    class="form-control">
+                                                                    <option value="" selected="" disabled="">Select
+                                                                        Fee Category</option>
+                                                                        @foreach ($classes as $class)
+                                                                        <option value="{{ $class->id }}">{{ $class->name }}</option>
+                                                                        @endforeach
+
+                                                                </select>
+                                                                <div class="help-block"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5">
+                                                        <div class="form-group">
+                                                            <h5>Amount<span class="text-danger">*</span></h5>
+                                                            <div class="controls">
+                                                                <input type="text" name="amount[]" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2" style="padding-top: 25px;">
+                                                        <span class="btn btn-success addeventmore"><i class="fa fa-plus-circle"></i></span>
+                                                    </div>
+                                            </div>
+
+
                                             <div class="text-xs-right">
                                                 <input type="submit" class="btn btn-rounded btn-info mb-5"
-                                                    style="float: right" value="Submit">
+                                                    style="float: left" value="Submit">
                                             </div>
                                         </div>
                                     </div>
