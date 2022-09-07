@@ -58,12 +58,12 @@
                                             @foreach ($allData as $key => $amount)
                                                 <tr>
                                                     <td class="text-center">{{ $key + 1 }}</td>
-                                                    <td>{{ $amount->fee_category_amount }}</td>
+                                                    <td>{{ $amount['fee_category']['name']}}</td>
                                                     <td class="text-center">
-                                                        <a href="{{ route('fee.category.edit', $amount->id) }}"
+                                                        <a href="#"
                                                             class="btn btn-info mb-5"><i
                                                                 class="mdi mdi-account-edit"></i></a>
-                                                        <a href="{{ route('fee.category.delete', $amount->id) }}"
+                                                        <a href="#"
                                                             class="btn btn-danger mb-5" id="delete"><i
                                                                 class="mdi mdi-account-remove"></i></a>
 
