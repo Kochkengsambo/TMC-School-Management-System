@@ -99,8 +99,8 @@ Route::prefix('setups')->group(function () {
     Route::get('fee/amount/view', [FeeAmountController::class, 'ViewFeeAmount'])->name('fee.amount.view');
     Route::get('fee/amount/add', [FeeAmountController::class, 'FeeAmountAdd'])->name('fee.amount.add');
     Route::post('fee/amount/store', [FeeAmountController::class, 'FeeAmountStore'])->name('store.fee.amount');
-    // Route::get('fee/category/edit/{id}', [FeeAmountController::class, 'FeeCatEdit'])->name('fee.category.edit');
-    // Route::post('fee/category/update/{id}', [FeeAmountController::class, 'FeeCatUpdate'])->name('update.fee.category');
+    Route::get('fee/amount/edit/{fee_category_id}', [FeeAmountController::class, 'FeeAmountEdit'])->name('fee.amount.edit');
+    Route::post('fee/amount/update/{fee_category_id}', [FeeAmountController::class, 'FeeAmountUpdate'])->name('update.fee.amount');
     // Route::get('fee/category/delete/{id}', [FeeAmountController::class, 'FeeCatDelete'])->name('fee.category.delete');
 
 });

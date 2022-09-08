@@ -60,7 +60,7 @@
                                                     <td class="text-center">{{ $key + 1 }}</td>
                                                     <td>{{ $amount['fee_category']['name']}}</td>
                                                     <td class="text-center">
-                                                        <a href="#"
+                                                        <a href="{{ route('fee.amount.edit',$amount->fee_category_id) }}"
                                                             class="btn btn-info mb-5"><i
                                                                 class="mdi mdi-account-edit"></i></a>
                                                         <a href="#"
