@@ -29,7 +29,7 @@
 
                         <div class="box">
                             <div class="box-header with-border">
-                                <h3 class="box-title">Student Fee Amount List</h3>
+                                <h3 class="box-title">Fee Amount Details</h3>
                                 <a href="{{ route('fee.amount.add') }}" style="float: right"
                                     class="btn btn-primary mb-5">
                                     <i class="mdi mdi-library-plus"></i>
@@ -39,36 +39,30 @@
                             <!-- /.box-header -->
                             <div class="box-body">
                                 <div class="table-responsive">
-                                    <table id="example1" class="table table-bordered table-striped">
-                                        <thead>
+
+                                    <h4><strong>Fee Category : </strong>{{ $detailsData['0']['fee_category']['name'] }}</h4>
+
+                                    <table class="table table-bordered table-striped">
+                                        <thead class="bg-primary">
                                             <tr>
                                                 <th class="text-center" width="5%">SL</th>
-                                                <th>Fee Category</th>
-                                                <th class="text-center" width="15%">Action</th>
+                                                <th>Class Name</th>
+                                                <th class="text-center" width="25%">Amount</th>
                                             </tr>
                                         </thead>
                                         <tfoot>
                                             <tr>
                                                 <th class="text-center">SL</th>
-                                                <th>Fee Category</th>
-                                                <th class="text-center">Action</th>
+                                                <th>Class Name</th>
+                                                <th class="text-center">Amount</th>
                                             </tr>
                                         </tfoot>
                                         <tbody>
-                                            @foreach ($allData as $key => $amount)
+                                            @foreach ($detailsData as $key => $details)
                                                 <tr>
                                                     <td class="text-center">{{ $key + 1 }}</td>
-                                                    <td>{{ $amount['fee_category']['name']}}</td>
-                                                    <td class="text-center">
-                                                        <a href="{{ route('fee.amount.edit',$amount->fee_category_id) }}"
-                                                            class="btn btn-info mb-5"><i
-                                                                class="mdi mdi-account-edit"></i></a>
-                                                        <a href="{{ route('fee.amount.details',$amount->fee_category_id) }}"
-                                                            class="btn btn-success mb-5"><i
-                                                                class="mdi mdi-account-card-details"></i></a>
-
-
-                                                    </td>
+                                                    <td>{{ $details['student_class']['name'] }}</td>
+                                                    <td class="text-center">{{ $details->amount }}</td>
                                                 </tr>
                                             @endforeach
 

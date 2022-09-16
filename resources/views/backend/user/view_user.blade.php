@@ -29,8 +29,8 @@
                         <div class="box">
                             <div class="box-header with-border">
                                 <h3 class="box-title">User List</h3>
-                                <a href="{{ route('user.add') }}" style="float: right"
-                                    class="btn btn-primary mb-5"><i class="mdi mdi-library-plus"></i>
+                                <a href="{{ route('user.add') }}" style="float: right" class="btn btn-primary mb-5"><i
+                                        class="mdi mdi-library-plus"></i>
                                     Add User</a>
                             </div>
                             <!-- /.box-header -->
@@ -63,12 +63,48 @@
                                                     <td>{{ $user->name }}</td>
                                                     <td>{{ $user->email }}</td>
                                                     <td class="text-center">
-                                                        <a href="{{ route('users.edit', $user->id) }}"
+                                                        {{-- <a href="{{ route('users.edit', $user->id) }}"
                                                             class="btn btn-info mb-5"><i
                                                                 class="mdi mdi-account-edit"></i></a>
                                                         <a href="{{ route('users.delete', $user->id) }}"
                                                             class="btn btn-danger mb-5" id="delete"><i
-                                                                class="mdi mdi-account-remove"></i></a>
+                                                                class="mdi mdi-account-remove"></i></a> --}}
+
+                                                        {{-- <select class="form-control">
+                                                            <option value="Action">Action</option>
+                                                            <option value=""><a
+                                                                    href="{{ route('users.edit', $user->id) }}"
+                                                                    class="btn btn-info mb-5"><i
+                                                                        class="mdi mdi-account-edit"></i>edit</a></option>
+                                                            <option><a href="{{ route('users.delete', $user->id) }}"
+                                                                    class="btn btn-danger mb-5" id="delete"><i
+                                                                        class="mdi mdi-account-remove"></i>delete</a>
+                                                            </option>
+                                                        </select> --}}
+
+                                                        eee
+
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <div class="btn-group">
+                                                            <button type="button" class="btn btn-info dropdown-toggle"
+                                                                data-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="true">
+                                                                Action
+                                                                <span class="caret"></span>
+                                                            </button>
+                                                            <ul class="dropdown-menu pull-right"
+                                                                style="min-width: 150px;margin-top: 5px !important;margin-bottom: 5px !important;">
+                                                                <li class="bg-success">
+                                                                    <a href="{{ route('users.edit', $user->id) }}" style="color:white"><i
+                                                                            class="mdi mdi-account-edit"></i>Edit</a>
+                                                                </li>
+                                                                <li class="bg-danger">
+                                                                    <a href="{{ route('users.delete', $user->id) }}" style="color:white"
+                                                                        id="delete"><i class="mdi mdi-account-remove"></i>Delete</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
                                                     </td>
                                                 </tr>
                                             @endforeach
