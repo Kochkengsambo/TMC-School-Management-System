@@ -38,7 +38,7 @@
                             <div class="box-body">
                                 <div class="table-responsive">
                                     <table id="example1" class="table table-bordered table-striped">
-                                        <thead>
+                                        <thead class="bg-secondary">
                                             <tr>
                                                 <th class="text-center" width="5%">SL</th>
                                                 <th>Name</th>
@@ -59,7 +59,7 @@
                                                     <td>{{ $student->name }}</td>
                                                     <td class="text-center">
                                                         <a href="{{ route('student.class.edit', $student->id) }}"
-                                                            class="btn btn-info mb-5"><i
+                                                            class="btn btn-primary mb-5"><i
                                                                 class="mdi mdi-account-edit"></i></a>
                                                         <a href="{{ route('student.class.delete', $student->id) }}"
                                                             class="btn btn-danger mb-5" id="delete"><i

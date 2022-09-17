@@ -43,7 +43,7 @@
                                     <h4><strong>Fee Category : </strong>{{ $detailsData['0']['fee_category']['name'] }}</h4>
 
                                     <table class="table table-bordered table-striped">
-                                        <thead class="bg-primary">
+                                        <thead class="bg-success">
                                             <tr>
                                                 <th class="text-center" width="5%">SL</th>
                                                 <th>Class Name</th>

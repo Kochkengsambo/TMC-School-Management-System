@@ -44,7 +44,7 @@
                                                 </div>
                                             </div>
                                             <div class="text-xs-right">
-                                                <input type="submit" class="btn btn-rounded btn-info mb-5"
+                                                <input type="submit" class="btn btn-rounded btn-success mb-5"
                                                     style="float: right" value="Update">
                                             </div>
                                         </div>

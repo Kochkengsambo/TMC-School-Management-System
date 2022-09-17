@@ -25,19 +25,19 @@
                 <!-- Basic Forms -->
                 <div class="box">
                     <div class="box-header with-border">
-                        <h4 class="box-title">Edit Student Class</h4>
+                        <h4 class="box-title">Add Exam Type</h4>
                     </div>
                     <div class="box-body">
                         <div class="row">
                             <div class="col">
-                                <form method="post" action="{{ route('update.students.class', $editData->id) }}">
+                                <form method="post" action="{{ route('store.exam.type') }}">
                                     @csrf
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <h5>Student Class Name <span class="text-danger">*</span></h5>
+                                                <h5>Exam Type Name <span class="text-danger">*</span></h5>
                                                 <div class="controls">
-                                                    <input type="text" name="name" value="{{ $editData->name }}" class="form-control">
+                                                    <input type="text" name="name" class="form-control">
                                                     @error('name')
                                                         <span class="text-danger">{{ $message }}</span>
                                                     @enderror
@@ -45,7 +45,7 @@
                                             </div>
                                             <div class="text-xs-right">
                                                 <input type="submit" class="btn btn-rounded btn-success mb-5"
-                                                    style="float: right" value="Update">
+                                                    style="float: right" value="Submit">
                                             </div>
                                         </div>
                                     </div>

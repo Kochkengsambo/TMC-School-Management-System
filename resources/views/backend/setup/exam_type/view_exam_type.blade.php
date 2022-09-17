@@ -29,44 +29,43 @@
 
                         <div class="box">
                             <div class="box-header with-border">
-                                <h3 class="box-title">Student Fee Amount List</h3>
-                                <a href="{{ route('fee.amount.add') }}" style="float: right"
+                                <h3 class="box-title">Exam Type List</h3>
+                                <a href="{{ route('exam.type.add') }}" style="float: right"
                                     class="btn btn-primary mb-5">
                                     <i class="mdi mdi-library-plus"></i>
-                                    <span>Add Fee Amount</span>
+                                    <span>Add Exam Type</span>
                                 </a>
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body">
                                 <div class="table-responsive">
                                     <table id="example1" class="table table-bordered table-striped">
-                                        {{-- <table id="example1" class="table table-bordered"> --}}
                                         <thead class="bg-secondary">
                                             <tr>
                                                 <th class="text-center" width="5%">SL</th>
-                                                <th>Fee Category</th>
+                                                <th>Name</th>
                                                 <th class="text-center" width="15%">Action</th>
                                             </tr>
                                         </thead>
                                         <tfoot>
                                             <tr>
                                                 <th class="text-center">SL</th>
-                                                <th>Fee Category</th>
+                                                <th>Name</th>
                                                 <th class="text-center">Action</th>
                                             </tr>
                                         </tfoot>
                                         <tbody>
-                                            @foreach ($allData as $key => $amount)
+                                            @foreach ($allData as $key => $examType)
                                                 <tr>
                                                     <td class="text-center">{{ $key + 1 }}</td>
-                                                    <td>{{ $amount['fee_category']['name']}}</td>
+                                                    <td>{{ $examType->name }}</td>
                                                     <td class="text-center">
-                                                        <a href="{{ route('fee.amount.edit',$amount->fee_category_id) }}"
+                                                        <a href="{{ route('exam.type.edit', $examType->id) }}"
                                                             class="btn btn-primary mb-5"><i
                                                                 class="mdi mdi-account-edit"></i></a>
-                                                        <a href="{{ route('fee.amount.details',$amount->fee_category_id) }}"
-                                                            class="btn btn-success mb-5"><i
-                                                                class="mdi mdi-account-card-details"></i></a>
+                                                        <a href="{{ route('exam.type.delete', $examType->id) }}"
+                                                            class="btn btn-danger mb-5" id="delete"><i
+                                                                class="mdi mdi-account-remove"></i></a>
 
 
                                                     </td>

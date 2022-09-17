@@ -37,7 +37,7 @@
                             <div class="box-body">
                                 <div class="table-responsive">
                                     <table id="example1" class="table table-bordered table-striped">
-                                        <thead>
+                                        <thead class="bg-secondary">
                                             <tr>
                                                 <th class="text-center" width="5%">SL</th>
                                                 <th>Role</th>
@@ -63,31 +63,16 @@
                                                     <td>{{ $user->name }}</td>
                                                     <td>{{ $user->email }}</td>
                                                     <td class="text-center">
-                                                        {{-- <a href="{{ route('users.edit', $user->id) }}"
-                                                            class="btn btn-info mb-5"><i
+                                                        <a href="{{ route('users.edit', $user->id) }}"
+                                                            class="btn btn-primary mb-5"><i
                                                                 class="mdi mdi-account-edit"></i></a>
                                                         <a href="{{ route('users.delete', $user->id) }}"
                                                             class="btn btn-danger mb-5" id="delete"><i
-                                                                class="mdi mdi-account-remove"></i></a> --}}
-
-                                                        {{-- <select class="form-control">
-                                                            <option value="Action">Action</option>
-                                                            <option value=""><a
-                                                                    href="{{ route('users.edit', $user->id) }}"
-                                                                    class="btn btn-info mb-5"><i
-                                                                        class="mdi mdi-account-edit"></i>edit</a></option>
-                                                            <option><a href="{{ route('users.delete', $user->id) }}"
-                                                                    class="btn btn-danger mb-5" id="delete"><i
-                                                                        class="mdi mdi-account-remove"></i>delete</a>
-                                                            </option>
-                                                        </select> --}}
-
-                                                        eee
-
+                                                                class="mdi mdi-account-remove"></i></a>
                                                     </td>
-                                                    <td class="text-right">
+                                                    {{-- <td class="text-center">
                                                         <div class="btn-group">
-                                                            <button type="button" class="btn btn-info dropdown-toggle"
+                                                            <button type="button" class="bprimary dropdown-toggle"
                                                                 data-toggle="dropdown" aria-haspopup="true"
                                                                 aria-expanded="true">
                                                                 Action
@@ -105,7 +90,7 @@
                                                                 </li>
                                                             </ul>
                                                         </div>
-                                                    </td>
+                                                    </td> --}}
                                                 </tr>
                                             @endforeach
 
