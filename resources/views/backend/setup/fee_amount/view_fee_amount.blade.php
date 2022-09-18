@@ -63,10 +63,10 @@
                                                     <td class="text-center">
                                                         <a href="{{ route('fee.amount.edit',$amount->fee_category_id) }}"
                                                             class="btn btn-primary mb-5"><i
-                                                                class="mdi mdi-account-edit"></i></a>
+                                                                class="mdi mdi-account-edit"></i>Edite</a>
                                                         <a href="{{ route('fee.amount.details',$amount->fee_category_id) }}"
                                                             class="btn btn-success mb-5"><i
-                                                                class="mdi mdi-account-card-details"></i></a>
+                                                                class="mdi mdi-account-card-details"></i>Details</a>
 
 
                                                     </td>

@@ -25,19 +25,19 @@
                 <!-- Basic Forms -->
                 <div class="box">
                     <div class="box-header with-border">
-                        <h4 class="box-title">Add Fee Category</h4>
+                        <h4 class="box-title">Edit School Subject</h4>
                     </div>
                     <div class="box-body">
                         <div class="row">
                             <div class="col">
-                                <form method="post" action="{{ route('store.fee.category') }}">
+                                <form method="post" action="{{ route('update.school.subject', $editData->id) }}">
                                     @csrf
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <h5>Fee Category Name <span class="text-danger">*</span></h5>
+                                                <h5>School Subject Name <span class="text-danger">*</span></h5>
                                                 <div class="controls">
-                                                    <input type="text" name="name" class="form-control">
+                                                    <input type="text" name="name" value="{{ $editData->name }}" class="form-control">
                                                     @error('name')
                                                         <span class="text-danger">{{ $message }}</span>
                                                     @enderror
@@ -45,7 +45,7 @@
                                             </div>
                                             <div class="text-xs-right">
                                                 <input type="submit" class="btn btn-success mb-5"
-                                                    style="float: right" value="Submit">
+                                                    style="float: right" value="Update">
                                             </div>
                                         </div>
                                     </div>

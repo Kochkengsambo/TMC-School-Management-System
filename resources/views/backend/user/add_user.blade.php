@@ -304,7 +304,7 @@
                                </div>
                            </div> --}}
                                             <div class="text-xs-right">
-                                                <input type="submit" class="btn btn-rounded btn-success mb-5" style="float: right"
+                                                <input type="submit" class="btn btn-success mb-5" style="float: right"
                                                     value="Submit">
                                             </div>
                                 </form>

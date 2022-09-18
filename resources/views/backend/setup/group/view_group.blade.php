@@ -62,10 +62,10 @@
                                                     <td class="text-center">
                                                         <a href="{{ route('student.group.edit', $group->id) }}"
                                                             class="btn btn-primary mb-5"><i
-                                                                class="mdi mdi-account-edit"></i></a>
+                                                                class="mdi mdi-account-edit"></i>Edit</a>
                                                         <a href="{{ route('student.group.delete', $group->id) }}"
                                                             class="btn btn-danger mb-5" id="delete"><i
-                                                                class="mdi mdi-account-remove"></i></a>
+                                                                class="mdi mdi-account-remove"></i>Delete</a>
 
 
                                                     </td>

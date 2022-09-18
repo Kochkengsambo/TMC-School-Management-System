@@ -44,7 +44,7 @@
                                                                 Fee Category</option>
                                                             @foreach ($fee_categories as $category)
                                                                 <option value="{{ $category->id }}"
-                                                                    {{ $editData['0']->fee_category_id == $category->id ? 'Selected' : '' }}>
+                                                                    {{ $editData['0']->fee_category_id == $category->id ? "Selected" : "" }}>
                                                                     {{ $category->name }}
                                                                 </option>
                                                             @endforeach
@@ -68,7 +68,7 @@
                                                                             Select Fee Category</option>
                                                                         @foreach ($classes as $class)
                                                                             <option value="{{ $class->id }}"
-                                                                                {{ $edit->class_id == $class->id ? 'selected' : '' }}>
+                                                                                {{ $edit->class_id == $class->id ? "selected" : "" }}>
                                                                                 {{ $class->name }}</option>
                                                                         @endforeach
 
@@ -87,7 +87,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-md-2" style="padding-top: 25px;">
-                                                            <span class="btn btn-success addeventmore"><i
+                                                            <span class="btn btn-dark addeventmore"><i
                                                                     class="fa fa-plus-circle"></i></span>
                                                             <span class="btn btn-danger removeeventmore"><i
                                                                     class="fa fa-minus-circle"></i></span>
@@ -99,7 +99,7 @@
 
                                             </div>
                                             <div class="text-xs-right">
-                                                <input type="submit" class="btn btn-rounded btn-success mb-5"
+                                                <input type="submit" class="btn btn-success mb-5"
                                                     style="float: left" value="Update">
                                             </div>
                                         </div>
@@ -143,7 +143,7 @@
                         </div>
                     </div>
                     <div class="col-md-2" style="padding-top: 25px;">
-                        <span class="btn btn-success addeventmore"><i class="fa fa-plus-circle"></i></span>
+                        <span class="btn btn-dark addeventmore"><i class="fa fa-plus-circle"></i></span>
                         <span class="btn btn-danger removeeventmore"><i class="fa fa-minus-circle"></i></span>
                     </div>
 

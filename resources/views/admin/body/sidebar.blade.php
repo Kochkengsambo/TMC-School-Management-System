@@ -30,6 +30,7 @@
                 </a>
             </li>
 
+            {{-- Manage User --}}
             <li class="treeview {{ ($prefix == '/users')?'active':'' }}">
                 <a href="#">
                     <i data-feather="message-circle"></i>
@@ -44,6 +45,7 @@
                 </ul>
             </li>
 
+            {{-- Manage Profile --}}
             <li class="treeview {{ ($prefix == '/profile')?'active':'' }}">
                 <a href="#">
                     <i data-feather="mail"></i> <span>Manage Profile</span>
@@ -57,6 +59,7 @@
                 </ul>
             </li>
 
+            {{-- Setup Management --}}
             <li class="treeview {{ ($prefix == '/setups')?'active':'' }}">
                 <a href="#">
                     <i data-feather="mail"></i> <span>Setup Management</span>
@@ -72,6 +75,8 @@
                     <li><a href="{{ route('fee.category.view') }}"><i class="ti-more"></i>Fee Category</a></li>
                     <li><a href="{{ route('fee.amount.view') }}"><i class="ti-more"></i>Fee Category Amount</a></li>
                     <li><a href="{{ route('exam.type.view') }}"><i class="ti-more"></i>Exam Type</a></li>
+                    <li><a href="{{ route('school.subject.view') }}"><i class="ti-more"></i>School Subject</a></li>
+                    <li><a href="{{ route('assign.subject.view') }}"><i class="ti-more"></i>Assign Subject</a></li>
                 </ul>
             </li>
 

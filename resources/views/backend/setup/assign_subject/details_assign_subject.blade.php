@@ -29,44 +29,46 @@
 
                         <div class="box">
                             <div class="box-header with-border">
-                                <h3 class="box-title">Student Class List</h3>
-                                <a href="{{ route('student.class.add') }}" style="float: right"
+                                <h3 class="box-title">Assign Subject Details</h3>
+                                <a href="{{ route('assign.subject.add') }}" style="float: right"
                                     class="btn btn-primary mb-5">
-                                    <i class="mdi mdi-library-plus"></i> Add Student Class</a>
+                                    <i class="mdi mdi-library-plus"></i>
+                                    <span>Add Assign Subject</span>
+                                </a>
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body">
                                 <div class="table-responsive">
-                                    <table id="example1" class="table table-bordered table-striped">
-                                        <thead class="bg-secondary">
+
+                                    <h4><strong>Assign Subject : </strong>{{ $detailsData['0']['student_class']['name'] }}</h4>
+
+                                    <table class="table table-bordered table-striped">
+                                        <thead class="bg-success">
                                             <tr>
                                                 <th class="text-center" width="5%">SL</th>
-                                                <th>Name</th>
-                                                <th class="text-center" width="15%">Action</th>
+                                                <th class="text-center" width="15%">Subject</th>
+                                                <th class="text-center" width="15%">Full Mark</th>
+                                                <th class="text-center" width="15%">Pass Mark</th>
+                                                <th class="text-center" width="15%">Subjective Mark</th>
                                             </tr>
                                         </thead>
                                         <tfoot>
                                             <tr>
-                                                <th class="text-center">SL</th>
-                                                <th>Name</th>
-                                                <th class="text-center">Action</th>
+                                                <th class="text-center" width="5%">SL</th>
+                                                <th class="text-center" width="15%">Subject</th>
+                                                <th class="text-center" width="15%">Full Mark</th>
+                                                <th class="text-center" width="15%">Pass Mark</th>
+                                                <th class="text-center" width="15%">Subjective Mark</th>
                                             </tr>
                                         </tfoot>
                                         <tbody>
-                                            @foreach ($allData as $key => $student)
+                                            @foreach ($detailsData as $key => $details)
                                                 <tr>
                                                     <td class="text-center">{{ $key + 1 }}</td>
-                                                    <td>{{ $student->name }}</td>
-                                                    <td class="text-center">
-                                                        <a href="{{ route('student.class.edit', $student->id) }}"
-                                                            class="btn btn-primary mb-5"><i
-                                                                class="mdi mdi-account-edit"></i>Edit</a>
-                                                        <a href="{{ route('student.class.delete', $student->id) }}"
-                                                            class="btn btn-danger mb-5" id="delete"><i
-                                                                class="mdi mdi-account-remove"></i>Delete</a>
-
-
-                                                            </td>
+                                                    <td>{{ $details['school_subject']['name'] }}</td>
+                                                    <td class="text-center">{{ $details->full_mark }}</td>
+                                                    <td class="text-center">{{ $details->pass_mark }}</td>
+                                                    <td class="text-center">{{ $details->subjective_mark }}</td>
                                                 </tr>
                                             @endforeach
 

@@ -65,10 +65,10 @@
                                                     <td class="text-center">
                                                         <a href="{{ route('users.edit', $user->id) }}"
                                                             class="btn btn-primary mb-5"><i
-                                                                class="mdi mdi-account-edit"></i></a>
+                                                                class="mdi mdi-account-edit"></i>Edit</a>
                                                         <a href="{{ route('users.delete', $user->id) }}"
                                                             class="btn btn-danger mb-5" id="delete"><i
-                                                                class="mdi mdi-account-remove"></i></a>
+                                                                class="mdi mdi-account-remove"></i>Delete</a>
                                                     </td>
                                                     {{-- <td class="text-center">
                                                         <div class="btn-group">

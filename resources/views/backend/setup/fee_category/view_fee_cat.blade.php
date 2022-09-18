@@ -62,10 +62,10 @@
                                                     <td class="text-center">
                                                         <a href="{{ route('fee.category.edit', $fee->id) }}"
                                                             class="btn btn-primary mb-5"><i
-                                                                class="mdi mdi-account-edit"></i></a>
+                                                                class="mdi mdi-account-edit"></i>Edit</a>
                                                         <a href="{{ route('fee.category.delete', $fee->id) }}"
                                                             class="btn btn-danger mb-5" id="delete"><i
-                                                                class="mdi mdi-account-remove"></i></a>
+                                                                class="mdi mdi-account-remove"></i>Delete</a>
 
 
                                                     </td>
