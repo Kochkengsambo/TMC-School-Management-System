@@ -26,6 +26,7 @@
             <li class="{{ ($route == 'dashboard')?'active':'' }}">
                 <a href="{{ route('dashboard') }}">
                     <i data-feather="pie-chart"></i>
+                    {{-- <i class="mdi mdi-home" style="font-size: 20px;"></i> --}}
                     <span>Dashboard</span>
                 </a>
             </li>
@@ -34,6 +35,7 @@
             <li class="treeview {{ ($prefix == '/users')?'active':'' }}">
                 <a href="#">
                     <i data-feather="message-circle"></i>
+                    {{-- <i class="mdi mdi-account" style="font-size: 20px;"></i> --}}
                     <span>Manage User</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
@@ -48,7 +50,9 @@
             {{-- Manage Profile --}}
             <li class="treeview {{ ($prefix == '/profile')?'active':'' }}">
                 <a href="#">
-                    <i data-feather="mail"></i> <span>Manage Profile</span>
+                    <i data-feather="mail"></i>
+                    {{-- <i class="mdi mdi-account-card-details" style="font-size: 20px;"></i> --}}
+                    <span>Manage Profile</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>
@@ -62,7 +66,9 @@
             {{-- Setup Management --}}
             <li class="treeview {{ ($prefix == '/setups')?'active':'' }}">
                 <a href="#">
-                    <i data-feather="mail"></i> <span>Setup Management</span>
+                    <i data-feather="mail"></i>
+                    {{-- <i class="mdi mdi-settings-box" style="font-size: 20px;"></i> --}}
+                    <span>Setup Management</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>
@@ -77,6 +83,7 @@
                     <li><a href="{{ route('exam.type.view') }}"><i class="ti-more"></i>Exam Type</a></li>
                     <li><a href="{{ route('school.subject.view') }}"><i class="ti-more"></i>School Subject</a></li>
                     <li><a href="{{ route('assign.subject.view') }}"><i class="ti-more"></i>Assign Subject</a></li>
+                    <li><a href="{{ route('designation.view') }}"><i class="ti-more"></i>Designation</a></li>
                 </ul>
             </li>
 
