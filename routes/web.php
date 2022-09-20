@@ -135,4 +135,11 @@ Route::prefix('setups')->group(function () {
     Route::post('designation/update/{id}', [DesignationController::class, 'DesignationUpdate'])->name('update.designation');
     Route::get('designation/delete/{id}', [DesignationController::class, 'DesignationDelete'])->name('designation.delete');
 
+    #===================================Manage Student===============================
+    Route::prefix('students')->group(function () {
+        Route::get('/reg/view', [StudentRegistrationController::class, 'StudentRegView'])->name('student.registration.view');
+        // Route::get('/edit', [StudentRegistrationController::class, 'ProfileEdit'])->name('profile.edit');
+        // Route::post('/store', [StudentRegistrationController::class, 'ProfileStore'])->name('profile.store');
+        // Route::get('/password/view', [StudentRegistrationController::class, 'PasswordView'])->name('password.view');
+    });
 });
