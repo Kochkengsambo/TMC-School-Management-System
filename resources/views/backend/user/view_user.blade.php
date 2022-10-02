@@ -43,6 +43,7 @@
                                                 <th>Role</th>
                                                 <th>Name</th>
                                                 <th>Email</th>
+                                                <th>Code</th>
                                                 <th class="text-center" width="15%">Action</th>
                                             </tr>
                                         </thead>
@@ -52,6 +53,7 @@
                                                 <th>Role</th>
                                                 <th>Name</th>
                                                 <th>Email</th>
+                                                <th>Code</th>
                                                 <th class="text-center">Action</th>
                                             </tr>
                                         </tfoot>
@@ -59,9 +61,10 @@
                                             @foreach ($allData as $key => $user)
                                                 <tr>
                                                     <td class="text-center">{{ $key + 1 }}</td>
-                                                    <td>{{ $user->usertype }}</td>
+                                                    <td>{{ $user->role }}</td>
                                                     <td>{{ $user->name }}</td>
                                                     <td>{{ $user->email }}</td>
+                                                    <td>{{ $user->code }}</td>
                                                     <td class="text-center">
                                                         <a href="{{ route('users.edit', $user->id) }}"
                                                             class="btn btn-primary mb-5"><i

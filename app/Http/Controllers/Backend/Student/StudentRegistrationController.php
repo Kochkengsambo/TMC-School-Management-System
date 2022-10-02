@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend\Student;
 
 use App\Http\Controllers\Controller;
+use App\Models\AssignStudent;
 use Illuminate\Http\Request;
 
 class StudentRegistrationController extends Controller
@@ -14,7 +15,9 @@ class StudentRegistrationController extends Controller
      */
     public function StudentRegView()
     {
-        //
+        // dd('Welcome');
+        $data['allData'] = AssignStudent::all();
+        return view('backend.setup.student_reg.view_student',$data);
     }
 
     /**
