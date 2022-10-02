@@ -4,6 +4,10 @@ namespace App\Http\Controllers\Backend\Student;
 
 use App\Http\Controllers\Controller;
 use App\Models\AssignStudent;
+use App\Models\StudentClass;
+use App\Models\StudentGroup;
+use App\Models\StudentShift;
+use App\Models\StudentYear;
 use Illuminate\Http\Request;
 
 class StudentRegistrationController extends Controller
@@ -17,7 +21,7 @@ class StudentRegistrationController extends Controller
     {
         // dd('Welcome');
         $data['allData'] = AssignStudent::all();
-        return view('backend.setup.student_reg.view_student',$data);
+        return view('backend.student.student_reg.view_student',$data);
     }
 
     /**
@@ -25,9 +29,14 @@ class StudentRegistrationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function StudentRegAdd()
     {
-        //
+        // dd('Welcome');
+        $data['years'] = StudentYear::all();
+        $data['classes'] = StudentClass::all();
+        $data['groups'] = StudentGroup::all();
+        $data['shifts'] = StudentShift::all();
+        return view('backend.student.student_reg.add_student',$data);
     }
 
     /**

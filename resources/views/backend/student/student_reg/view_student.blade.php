@@ -30,7 +30,7 @@
                         <div class="box">
                             <div class="box-header with-border">
                                 <h3 class="box-title">Student List</h3>
-                                <a href="{{ route('student.year.add') }}" style="float: right"
+                                <a href="{{ route('student.registration.add') }}" style="float: right"
                                     class="btn btn-primary mb-5">
                                     <i class="mdi mdi-library-plus"></i>
                                     <span>Add Student</span>
@@ -64,12 +64,12 @@
                                                     <td>{{ $value->class_id }}</td>
                                                     <td>{{ $value->year_id }}</td>
                                                     <td class="text-center">
-                                                        <a href="{{ route('student.year.edit', $year->id) }}"
+                                                        {{-- <a href="{{ route('student.year.edit', $year->id) }}"
                                                             class="btn btn-primary mb-5"><i
                                                                 class="mdi mdi-account-edit"></i>Edit</a>
                                                         <a href="{{ route('student.year.delete', $year->id) }}"
                                                             class="btn btn-danger mb-5" id="delete"><i
-                                                                class="mdi mdi-account-remove"></i>Delete</a>
+                                                                class="mdi mdi-account-remove"></i>Delete</a> --}}
 
 
                                                     </td>

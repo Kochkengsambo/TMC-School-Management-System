@@ -141,7 +141,9 @@ Route::prefix('setups')->group(function () {
 #===================================Student Registration Routes===============================
 Route::prefix('students')->group(function () {
     Route::get('/reg/view', [StudentRegistrationController::class, 'StudentRegView'])->name('student.registration.view');
-    // Route::get('/edit', [StudentRegistrationController::class, 'ProfileEdit'])->name('profile.edit');
-    // Route::post('/store', [StudentRegistrationController::class, 'ProfileStore'])->name('profile.store');
-    // Route::get('/password/view', [StudentRegistrationController::class, 'PasswordView'])->name('password.view');
+    Route::get('/reg/Add', [StudentRegistrationController::class, 'StudentRegAdd'])->name('student.registration.add');
+    // Route::post('/reg/store', [StudentRegistrationController::class, 'StudentRegStore'])->name('student.registration.store');
+    // Route::get('/reg/edit/{id}', [StudentRegistrationController::class, 'StudentRegEdit'])->name('student.registration.edit');
+    // Route::post('/reg/post/{id}', [StudentRegistrationController::class, 'StudentRegUpdate'])->name('student.registration.update');
+    // Route::post('/reg/delete/{id}', [StudentRegistrationController::class, 'StudentRegDelete'])->name('student.registration.delete');
 });
