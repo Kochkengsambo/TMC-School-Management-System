@@ -92,10 +92,10 @@
                                                                 <option value="" selected="" disabled="">Select
                                                                     Gender</option>
                                                                 <option value="Male"
-                                                                    {{ ($editData->gender == 'Male' ? 'selected' : '') }}>
+                                                                    {{ $editData->gender == 'Male' ? 'selected' : '' }}>
                                                                     Male</option>
                                                                 <option value="Female"
-                                                                    {{ ($editData->gender == 'Female' ? 'selected' : '') }}>
+                                                                    {{ $editData->gender == 'Female' ? 'selected' : '' }}>
                                                                     Female</option>
                                                             </select>
                                                             <div class="help-block"></div>
@@ -115,15 +115,15 @@
                                                             <img src="{{ !empty($user->image) ? url('upload/user_images/' . $user->image) : url('upload/no_image.jpg') }}"
                                                                 alt="" id="showImage"
                                                                 style="width: 100px; width:100px; border:1px solid #000000;">
+                                                        </div>
+
                                                     </div>
+                                                </div><!-- End row -->
 
+                                                <div class="text-xs-right">
+                                                    <input type="submit" class="btn btn-success mb-5" style="float: right"
+                                                        value="Update">
                                                 </div>
-                                            </div><!-- End row -->
-
-                                            <div class="text-xs-right">
-                                                <input type="submit" class="btn btn-success mb-5"
-                                                    style="float: right" value="Update">
-                                            </div>
                                 </form>
 
                             </div>
