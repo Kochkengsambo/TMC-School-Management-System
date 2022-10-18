@@ -45,7 +45,7 @@
                                             <tr>
                                                 <th class="text-center" width="5%">SL</th>
                                                 <th>Fee Category</th>
-                                                <th class="text-center" width="15%">Action</th>
+                                                <th class="text-center" width="20%">Action</th>
                                             </tr>
                                         </thead>
                                         <tfoot>

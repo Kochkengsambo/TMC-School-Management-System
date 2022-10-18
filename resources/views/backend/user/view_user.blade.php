@@ -44,7 +44,7 @@
                                                 <th>Name</th>
                                                 <th>Email</th>
                                                 <th>Code</th>
-                                                <th class="text-center" width="15%">Action</th>
+                                                <th class="text-center" width="20%">Action</th>
                                             </tr>
                                         </thead>
                                         <tfoot>

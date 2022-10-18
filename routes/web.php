@@ -135,7 +135,6 @@ Route::prefix('setups')->group(function () {
     Route::get('designation/edit/{id}', [DesignationController::class, 'DesignationEdit'])->name('designation.edit');
     Route::post('designation/update/{id}', [DesignationController::class, 'DesignationUpdate'])->name('update.designation');
     Route::get('designation/delete/{id}', [DesignationController::class, 'DesignationDelete'])->name('designation.delete');
-
 });
 
 #===================================Student Registration Routes===============================
@@ -143,7 +142,10 @@ Route::prefix('students')->group(function () {
     Route::get('/reg/view', [StudentRegistrationController::class, 'StudentRegView'])->name('student.registration.view');
     Route::get('/reg/Add', [StudentRegistrationController::class, 'StudentRegAdd'])->name('student.registration.add');
     Route::post('/reg/store', [StudentRegistrationController::class, 'StudentRegStore'])->name('student.registration.store');
-    // Route::get('/reg/edit/{id}', [StudentRegistrationController::class, 'StudentRegEdit'])->name('student.registration.edit');
-    // Route::post('/reg/post/{id}', [StudentRegistrationController::class, 'StudentRegUpdate'])->name('student.registration.update');
-    // Route::post('/reg/delete/{id}', [StudentRegistrationController::class, 'StudentRegDelete'])->name('student.registration.delete');
+    Route::get('/year/class/search', [StudentRegistrationController::class, 'StudentClassYearSearch'])->name('student.year.class.search');
+    Route::get('/reg/edit/{student_id}', [StudentRegistrationController::class, 'StudentRegEdit'])->name('student.registration.edit');
+    Route::post('/reg/update/{student_id}', [StudentRegistrationController::class, 'StudentRegUpdate'])->name('update.student.registration');
+    Route::get('/reg/promotion/{student_id}', [StudentRegistrationController::class, 'StudentRegPromotion'])->name('student.registration.promotion');
+    Route::post('/reg/update/promotion/{student_id}', [StudentRegistrationController::class, 'StudentUpdatePromotion'])->name('promotion.student.registration');
+    Route::get('/reg/details/{student_id}', [StudentRegistrationController::class, 'StudentRegDetails'])->name('student.registration.details');
 });

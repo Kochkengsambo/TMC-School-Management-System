@@ -53,6 +53,11 @@
             overflow: hidden;
         }
     </style>
+    {{-- <style>
+        body {
+          background-image: url('{{ asset('backend/images/auth-bg/bg-4.jpg')}}');
+        }
+    </style> --}}
 </head>
 {{-- <body class="hold-transition theme-primary bg-gradient-primary"> --}}
 <body class="background-radial-gradient">
