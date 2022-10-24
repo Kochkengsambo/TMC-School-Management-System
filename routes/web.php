@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Changelanguage;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\ProfileController;
@@ -14,6 +16,7 @@ use App\Http\Controllers\Backend\Setup\StudentClassController;
 use App\Http\Controllers\Backend\Setup\StudentGroupController;
 use App\Http\Controllers\Backend\Setup\AssignSubjectController;
 use App\Http\Controllers\Backend\Setup\SchoolSubjectController;
+use App\Http\Controllers\Backend\Student\StudentRollController;
 use App\Http\Controllers\Backend\Student\StudentRegistrationController;
 
 /*
@@ -44,6 +47,10 @@ Route::middleware([
         return view('admin.index');
     })->name('dashboard');
 });
+
+// Change Language Route
+// Auth::routes();
+Route::get('/set-language/{lang}', [Changelanguage::class, 'setLocale'])->name('set-language');
 
 Route::get('/admin/logout', [AdminController::class, 'Logout'])->name('admin.logout');
 
@@ -148,4 +155,9 @@ Route::prefix('students')->group(function () {
     Route::get('/reg/promotion/{student_id}', [StudentRegistrationController::class, 'StudentRegPromotion'])->name('student.registration.promotion');
     Route::post('/reg/update/promotion/{student_id}', [StudentRegistrationController::class, 'StudentUpdatePromotion'])->name('promotion.student.registration');
     Route::get('/reg/details/{student_id}', [StudentRegistrationController::class, 'StudentRegDetails'])->name('student.registration.details');
+
+    // Student Roll Generate Routes
+    Route::get('/roll/generate/view', [StudentRollController::class, 'StudentRollView'])->name('roll.generate.view');
+    Route::get('/reg/getstudents', [StudentRollController::class, 'GetStudents'])->name('student.registration.getstudents');
+    Route::post('/roll/generate/store', [StudentRollController::class, 'StudentRollStore'])->name('roll.generate.store');
 });

@@ -32,6 +32,50 @@
 
         <div class="navbar-custom-menu r-side">
             <ul class="nav navbar-nav">
+
+
+                <li class="nav-item dropdown">
+                    <div class="btn header-item waves-effect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding-top: 35%;">
+                        @php
+                            $lang = App::getLocale();
+                            if($lang == 'kh'){
+                                $langImg = asset('backend/images/flage/flage_kh.png');
+                            }else{
+                                $langImg = asset('backend/images/flage/flage_en.png');
+                            }
+                        @endphp
+                        <img id="" src="{{ $langImg??'' }}" alt="Header Language" height="16">
+                    </div>
+                    <div class="dropdown-menu dropdown-menu-end">
+
+                        {{-- US Item --}}
+                        <a href="{{ route('set-language', 'en') }}" class="dropdown-item notify-item language" data-lang="en">
+                            <img src="{{ asset('backend/images/flage/flage_en.png') }}" alt="user-image" class="me-1" height="12" style="border: 1px solid #ffff;">
+                            <span class="align-middle">English</span>
+                        </a>
+
+                         {{-- US Item --}}
+                         <a href="{{ route('set-language', 'kh') }}" class="dropdown-item notify-item language" data-lang="sp">
+                            <img src="{{ asset('backend/images/flage/flage_kh.png') }}" alt="user-image" class="me-1" height="12" style="border: 1px solid #ffff;">
+                            <span class="align-middle">Khmer</span>
+                        </a>
+
+                    </div>
+
+                    {{-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ Config::get('languages')[App::getLocale()] }}
+                    </a>
+                    <div class="dropdown-menu search-bar" aria-labelledby="navbarDropdownMenuLink">
+                    @foreach (Config::get('languages') as $lang => $language)
+                        @if ($lang != App::getLocale())
+                                <a class="dropdown-item" href="#"> Lenguache</a>
+                                <a class="dropdown-item" href="#"> Lenguache</a>
+                        @endif
+                    @endforeach
+                    </div> --}}
+                </li>
+
+
                 <!-- full Screen -->
                 <li class="search-bar">
                     <div class="lookup lookup-circle lookup-right">

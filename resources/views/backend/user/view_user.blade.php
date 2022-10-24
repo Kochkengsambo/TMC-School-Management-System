@@ -28,7 +28,7 @@
 
                         <div class="box">
                             <div class="box-header with-border">
-                                <h3 class="box-title">User List</h3>
+                                <h3 class="box-title">{{ __('admin.user_list') }}</h3>
                                 <a href="{{ route('user.add') }}" style="float: right" class="btn btn-primary mb-5"><i
                                         class="mdi mdi-library-plus"></i>
                                     Add User</a>
