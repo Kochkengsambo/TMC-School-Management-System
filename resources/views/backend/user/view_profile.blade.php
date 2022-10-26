@@ -29,13 +29,13 @@
                         <div class="box box-widget widget-user">
                             <!-- Add the bg color to the header using any of the bg-* classes -->
                             <div class="widget-user-header bg-black">
-                                <h3 class="widget-user-username">User Name : {{ $user->name }}</h3>
+                                <h6 class="widget-user-username">{{ __('admin.user_name') }} : {{ $user->name }}</h6>
 
                                 <a href="{{ route('profile.edit') }}" style="float: right"
-                                    class="btn btn-primary mb-5">Edit Profile</a>
+                                    class="btn btn-primary mb-5">{{ __('admin.edit_user') }}</a>
 
-                                <h6 class="widget-user-desc">User Type : {{ $user->usertype }}</h6>
-                                <h6 class="widget-user-desc">User Email : {{ $user->email }}</h6>
+                                <h6 class="widget-user-desc">{{ __('admin.user_type') }} : {{ $user->usertype }}</h6>
+                                <h6 class="widget-user-desc">{{ __('admin.user_email') }} : {{ $user->email }}</h6>
 
                             </div>
                             <div class="widget-user-image">
@@ -47,7 +47,7 @@
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <div class="description-block">
-                                            <h5 class="description-header">Mobile No</h5>
+                                            <h5 class="description-header">{{ __('admin.mobile_no') }}</h5>
                                             <span class="description-text">{{ $user->mobile }}</span>
                                         </div>
                                         <!-- /.description-block -->
@@ -55,7 +55,7 @@
                                     <!-- /.col -->
                                     <div class="col-sm-4 br-1 bl-1">
                                         <div class="description-block">
-                                            <h5 class="description-header">Address</h5>
+                                            <h6 class="description-header">{{ __('admin.address') }}</h6>
                                             <span class="description-text">{{ $user->address }}</span>
                                         </div>
                                         <!-- /.description-block -->
@@ -63,7 +63,7 @@
                                     <!-- /.col -->
                                     <div class="col-sm-4">
                                         <div class="description-block">
-                                            <h5 class="description-header">Gender</h5>
+                                            <h6 class="description-header">{{ __('admin.gender') }}</h6>
                                             <span class="description-text">{{ $user->gender }}</span>
                                         </div>
                                         <!-- /.description-block -->

@@ -32,11 +32,17 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="{{ asset('css/googleapis.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/googleapis_s.css') }}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Bayon' rel='stylesheet' type='text/css'>
+
     {{-- End message demo --}}
 
 </head>
 
-<body class="hold-transition dark-skin sidebar-mini theme-primary fixed">
+<body class="hold-transition dark-skin sidebar-mini theme-primary fixed" style="font-family: Roboto, 'Khmer OS Battambong','Khmer OS Battambang';">
 
     <div class="wrapper">
 

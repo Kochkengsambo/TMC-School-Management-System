@@ -25,7 +25,7 @@
                 <!-- Basic Forms -->
                 <div class="box">
                     <div class="box-header with-border">
-                        <h4 class="box-title">Edit Student Year</h4>
+                        <h5 class="box-title">{{ __('admin.edit_student_year') }}</h5>
                     </div>
                     <div class="box-body">
                         <div class="row">
@@ -35,7 +35,7 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <h5>Student Year Name <span class="text-danger">*</span></h5>
+                                                <h6>{{ __('admin.edit_student_year') }} <span class="text-danger">*</span></h6>
                                                 <div class="controls">
                                                     <input type="text" name="name" value="{{ $editData->name }}" class="form-control">
                                                     @error('name')
@@ -45,7 +45,7 @@
                                             </div>
                                             <div class="text-xs-right">
                                                 <input type="submit" class="btn btn-success mb-5"
-                                                    style="float: right" value="Update">
+                                                    style="float: right" value="{{ __('admin.update') }}">
                                             </div>
                                         </div>
                                     </div>

@@ -29,11 +29,11 @@
 
                         <div class="box">
                             <div class="box-header with-border">
-                                <h3 class="box-title">Student Year List</h3>
+                                <h5 class="box-title">{{ __('admin.student_year_list') }}</h5>
                                 <a href="{{ route('student.year.add') }}" style="float: right"
                                     class="btn btn-primary mb-5">
                                     <i class="mdi mdi-library-plus"></i>
-                                    <span>Add Student Year</span>
+                                    <span>{{ __('admin.add_student_year') }}</span>
                                 </a>
                             </div>
                             <!-- /.box-header -->
@@ -42,16 +42,16 @@
                                     <table id="example1" class="table table-bordered table-striped">
                                         <thead class="bg-secondary">
                                             <tr>
-                                                <th class="text-center" width="5%">SL</th>
-                                                <th>Name</th>
-                                                <th class="text-center" width="20%">Action</th>
+                                                <th class="text-center" width="5%">{{ __('admin.sl') }}</th>
+                                                <th>{{ __('admin.name') }}</th>
+                                                <th class="text-center" width="20%">{{ __('admin.action') }}</th>
                                             </tr>
                                         </thead>
                                         <tfoot>
                                             <tr>
-                                                <th class="text-center">SL</th>
-                                                <th>Name</th>
-                                                <th class="text-center">Action</th>
+                                                <th class="text-center">{{ __('admin.sl') }}</th>
+                                                <th>{{ __('admin.name') }}</th>
+                                                <th class="text-center">{{ __('admin.action') }}</th>
                                             </tr>
                                         </tfoot>
                                         <tbody>

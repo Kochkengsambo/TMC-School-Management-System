@@ -26,7 +26,7 @@
                 <!-- Basic Forms -->
                 <div class="box">
                     <div class="box-header with-border">
-                        <h4 class="box-title">Update User</h4>
+                        <h5 class="box-title">{{ __('admin.update_user') }}</h5>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -40,14 +40,13 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <h5>User Role<span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.user_role') }}<span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <select name="role" required=""
                                                                 class="form-control">
-                                                                <option value="" selected="" disabled="">Select
-                                                                    Role</option>
-                                                                <option value="Admin" {{ ($editData->role == "Admin" ? "selected" : "") }}>Admin</option>
-                                                                <option value="Operator" {{ ($editData->role == "Operator" ? "selected" : "") }}>Operator</option>
+                                                                <option value="" selected="" disabled="">{{__('admin.select_role')}}</option>
+                                                                <option value="Admin" {{ ($editData->role == "Admin" ? "selected" : "") }}>{{ __('admin.admin') }}</option>
+                                                                <option value="Operator" {{ ($editData->role == "Operator" ? "selected" : "") }}>{{ __('admin.operator') }}</option>
                                                             </select>
                                                             <div class="help-block"></div>
                                                         </div>
@@ -55,7 +54,7 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <h5>User Name <span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.user_name') }} <span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <input type="text" name="name" class="form-control"
                                                                 value="{{ $editData->name }}" required="">
@@ -68,7 +67,7 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <h5>User Email <span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.user_email') }} <span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <input type="email" name="email" class="form-control"
                                                                 value="{{ $editData->email }}" required="">
@@ -298,7 +297,7 @@
                            </div> --}}
                                             <div class="text-xs-right">
                                                 <input type="submit" class="btn btn-success mb-5" style="float: right"
-                                                    value="Update">
+                                                    value="{{ __('admin.update') }}">
                                             </div>
                                 </form>
 

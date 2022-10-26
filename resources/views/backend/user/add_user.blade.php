@@ -26,7 +26,7 @@
                 <!-- Basic Forms -->
                 <div class="box">
                     <div class="box-header with-border">
-                        <h4 class="box-title">Add User</h4>
+                        <h5 class="box-title">{{ __('admin.add_user') }}</h5>
                         {{-- <h6 class="box-subtitle">Bootstrap Form Validation check the <a class="text-warning" href="http://reactiveraven.github.io/jqBootstrapValidation/">official website </a></h6> --}}
                     </div>
                     <!-- /.box-header -->
@@ -41,14 +41,13 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <h5>User Role<span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.user_role') }}<span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <select name="role" id="role" required=""
                                                                 class="form-control">
-                                                                <option value="" selected="" disabled="">Select
-                                                                    Role</option>
-                                                                <option value="Admin">Admin</option>
-                                                                <option value="Operator">Operator</option>
+                                                                <option value="" selected="" disabled="">{{__('admin.select_role')}}</option>
+                                                                <option value="Admin">{{ __('admin.admin') }}</option>
+                                                                <option value="Operator">{{ __('admin.operator') }}</option>
                                                             </select>
                                                             <div class="help-block"></div>
                                                         </div>
@@ -56,7 +55,7 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <h5>User Name <span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.user_name') }}<span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <input type="text" name="name" class="form-control"
                                                                 required="">
@@ -69,7 +68,7 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <h5>User Email <span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.user_email') }}<span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <input type="email" name="email" class="form-control"
                                                                 required="">
@@ -305,7 +304,7 @@
                            </div> --}}
                                             <div class="text-xs-right">
                                                 <input type="submit" class="btn btn-success mb-5" style="float: right"
-                                                    value="Submit">
+                                                    value="{{ __('admin.submit') }}">
                                             </div>
                                 </form>
 

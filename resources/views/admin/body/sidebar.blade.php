@@ -3,12 +3,19 @@
     $route = Route::current()->getName();
 @endphp
 {{-- @dd($route) --}}
-{{-- <link href='https://fonts.googleapis.com/css?family=Khmer' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Khmer' rel='stylesheet'>
 <style>
-span {
-    font-family: 'Khmer';font-size: 14px;
-}
-</style> --}}
+.sidebar {
+        font-family: Roboto, 'Khmer OS Battambong', 'Khmer OS Battambang';
+    }
+
+    .sidebar .menu .list .ml-menu li.active a.toggled:not(.menu-toggle) {
+        font-weight: 600;
+        margin-left: 5px;
+        color: #cc574e;
+    }
+
+</style>
 
 <aside class="main-sidebar">
     <!-- sidebar-->

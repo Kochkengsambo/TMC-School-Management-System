@@ -1,5 +1,6 @@
 <?php
 return [
+#=================[All Menu]==================
     'dashboard'                     => 'Dashboard',
     'user_list'                     => 'User List',
     'manage_user'                   => 'Manage User',
@@ -22,7 +23,51 @@ return [
     'student_management'            => 'Student Management',
     'student_registration'          => 'Student Registration',
     'roll_generate'                 => 'Roll Generate',
+    'add_user'                      => 'Add User',
+    'roll'                          => 'Role',
+    'name'                          => 'Name',
+    'email'                         => 'Email',
+    'code'                          => 'Code',
+    'action'                        => 'Action',
+    'sl'                            => 'SL',
 
+    #=================[User Management]==================
+    'update_user'                   => 'Update User',
+    'user_role'                     => 'User Role',
+    'select_role'                   => 'Select Role',
+    'admin'                         => 'Admin',
+    'operator'                      => 'Operator',
+    'user_name'                     => 'User Name',
+    'user_email'                    => 'User Email',
+    'update'                        => 'Update',
+    'submit'                        => 'Submit',
+
+     #=================[Manage Profile]==================
+     'edit_user'                     => 'Edit Profile',
+     'user_type'                     => 'User Type',
+     'mobile_no'                     => 'Mobile No',
+     'address'                       => 'Address',
+     'gender'                        => 'Gender',
+     'user_mobile'                   => 'User Mobile',
+     'user_address'                  => 'User Address',
+     'user_gender'                   => 'User Gender',
+     'select_gender'                 => 'Select Gender',
+     'male'                          => 'Male',
+     'female'                        => 'Female',
+     'pro_img'                       => 'Profile Image',
+     'current_password'              => 'Current Password',
+     'new_password'                  => 'New Password',
+     'confirm_password'              => 'Confirm Password',
+
+     #=================[Setup Management]==================
+     'student_class_list'            => 'Student Class List',
+     'add_student_class'             => 'Add Student Class',
+     'student_class_name'            => 'Student Class Name',
+     'edit_student_class'            => 'Edit Student Class',
+     'student_year_list'             => 'Student Year List',
+     'add_student_year'              => 'Add Student Year',
+     'student_year_name'             => 'Student Year Name',
+     'edit_student_year'             => 'Edit Student Year',
 
 
 ];

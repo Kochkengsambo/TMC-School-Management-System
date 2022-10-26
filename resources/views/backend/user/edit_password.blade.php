@@ -25,7 +25,7 @@
                 <!-- Basic Forms -->
                 <div class="box">
                     <div class="box-header with-border">
-                        <h4 class="box-title">Change Password</h4>
+                        <h4 class="box-title">{{ __('admin.change_password') }}</h4>
                     </div>
                     <div class="box-body">
                         <div class="row">
@@ -35,7 +35,7 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <h5>Current Password <span class="text-danger">*</span></h5>
+                                                <h6>{{ __('admin.current_password') }} <span class="text-danger">*</span></h6>
                                                 <div class="controls">
                                                     <input type="password" name="oldpassword" id="current_password" class="form-control"
                                                         required="">
@@ -45,7 +45,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <h5>New Password <span class="text-danger">*</span></h5>
+                                                <h6>{{ __('admin.new_password') }} <span class="text-danger">*</span></h6>
                                                 <div class="controls">
                                                     <input type="password" name="password" id="password" class="form-control"
                                                         required="">
@@ -55,7 +55,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <h5>Confirm Password <span class="text-danger">*</span></h5>
+                                                <h6>{{ __('admin.confirm_password') }} <span class="text-danger">*</span></h6>
                                                 <div class="controls">
                                                     <input type="password" name="password_confirmation" id="password_confirmation" class="form-control"
                                                         required="">
@@ -66,7 +66,7 @@
                                             </div>
                                             <div class="text-xs-right">
                                                 <input type="submit" class="btn btn-success mb-5"
-                                                    style="float: right" value="Submit">
+                                                    style="float: right" value="{{ __('admin.submit') }}">
                                             </div>
                                         </div>
                                     </div>

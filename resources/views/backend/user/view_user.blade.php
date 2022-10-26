@@ -28,10 +28,10 @@
 
                         <div class="box">
                             <div class="box-header with-border">
-                                <h3 class="box-title">{{ __('admin.user_list') }}</h3>
+                                <h5 class="box-title">{{ __('admin.user_list') }}</h5>
                                 <a href="{{ route('user.add') }}" style="float: right" class="btn btn-primary mb-5"><i
                                         class="mdi mdi-library-plus"></i>
-                                    Add User</a>
+                                    {{ __('admin.add_user') }}</a>
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body">
@@ -39,22 +39,22 @@
                                     <table id="example1" class="table table-bordered table-striped">
                                         <thead class="bg-secondary">
                                             <tr>
-                                                <th class="text-center" width="5%">SL</th>
-                                                <th>Role</th>
-                                                <th>Name</th>
-                                                <th>Email</th>
-                                                <th>Code</th>
-                                                <th class="text-center" width="20%">Action</th>
+                                                <th class="text-center" width="5%">{{ __('admin.sl') }}</th>
+                                                <th>{{ __('admin.roll') }}</th>
+                                                <th>{{ __('admin.name') }}</th>
+                                                <th>{{ __('admin.email') }}</th>
+                                                <th>{{ __('admin.code') }}</th>
+                                                <th class="text-center" width="20%">{{ __('admin.action') }}</th>
                                             </tr>
                                         </thead>
                                         <tfoot>
                                             <tr>
-                                                <th class="text-center">SL</th>
-                                                <th>Role</th>
-                                                <th>Name</th>
-                                                <th>Email</th>
-                                                <th>Code</th>
-                                                <th class="text-center">Action</th>
+                                                <th class="text-center">{{ __('admin.sl') }}</th>
+                                                <th>{{ __('admin.roll') }}</th>
+                                                <th>{{ __('admin.name') }}</th>
+                                                <th>{{ __('admin.email') }}</th>
+                                                <th>{{ __('admin.code') }}</th>
+                                                <th class="text-center">{{ __('admin.action') }}</th>
                                             </tr>
                                         </tfoot>
                                         <tbody>
