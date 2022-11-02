@@ -27,7 +27,9 @@
                     <!-- logo for regular state and mobile devices -->
                     <div class="d-flex align-items-center justify-content-center">
                         <img src="{{ asset('backend/images/logo-dark.png') }}" alt="">
-                        <h3><b>TMC</b> Admin</h3>
+                        {{-- <h3><b>TMC</b> Admin</h3> --}}
+                        <h3 style="font-size: 12px;"><b style="font-family: Khmer OS Muol Light;">សាកលវិទ្យាល័យបៀលប្រាយ</b><br><b style="font-family: Khmer OS Battambong; font-size: 14px;">Build Bright University</b></h3>
+                        {{-- <h3 style="font-size: 18px;">Build Bright University</h3> --}}
                     </div>
                 </a>
             </div>
