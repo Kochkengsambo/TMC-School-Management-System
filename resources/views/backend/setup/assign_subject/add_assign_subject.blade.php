@@ -25,7 +25,7 @@
                 <!-- Basic Forms -->
                 <div class="box">
                     <div class="box-header with-border">
-                        <h4 class="box-title">Add Assign Subject</h4>
+                        <h5 class="box-title">{{ __('admin.add_assign_sub') }}</h5>
                     </div>
                     <div class="box-body">
                         <div class="row">
@@ -37,11 +37,10 @@
                                             <div class="add_item">
 
                                                 <div class="form-group">
-                                                    <h5>Class Name<span class="text-danger">*</span></h5>
+                                                    <h6>{{ __('admin.class_name') }}<span class="text-danger">*</span></h6>
                                                     <div class="controls">
                                                         <select name="class_id" required="" class="form-control">
-                                                            <option value="" selected="" disabled="">Select
-                                                                Class</option>
+                                                            <option value="" selected="" disabled="">{{ __('admin.select_class') }}</option>
                                                             @foreach ($classes as $class)
                                                                 <option value="{{ $class->id }}">{{ $class->name }}
                                                                 </option>
@@ -55,12 +54,12 @@
                                                 <div class="row">
                                                     <div class="col-md-3">
                                                         <div class="form-group">
-                                                            <h5>Student Subject<span class="text-danger">*</span></h5>
+                                                            <h6>{{ __('admin.student_subject') }}<span class="text-danger">*</span></h6>
                                                             <div class="controls">
                                                                 <select name="subject_id[]" required=""
                                                                     class="form-control">
                                                                     <option value="" selected="" disabled="">
-                                                                        Select Subject</option>
+                                                                        {{ __('admin.select_subject') }}</option>
                                                                     @foreach ($subjects as $subject)
                                                                         <option value="{{ $class->id }}">
                                                                             {{ $subject->name }}</option>
@@ -73,7 +72,7 @@
                                                     </div>
                                                     <div class="col-md-3">
                                                         <div class="form-group">
-                                                            <h5>Full Mark<span class="text-danger">*</span></h5>
+                                                            <h6>{{ __('admin.full_mark') }}<span class="text-danger">*</span></h6>
                                                             <div class="controls">
                                                                 <input type="text" name="full_mark[]"
                                                                     class="form-control">
@@ -82,7 +81,7 @@
                                                     </div>
                                                     <div class="col-md-3">
                                                         <div class="form-group">
-                                                            <h5>Pass Mark<span class="text-danger">*</span></h5>
+                                                            <h6>{{ __('admin.pass_mark') }}<span class="text-danger">*</span></h6>
                                                             <div class="controls">
                                                                 <input type="text" name="pass_mark[]"
                                                                     class="form-control">
@@ -91,7 +90,7 @@
                                                     </div>
                                                     <div class="col-md-2">
                                                         <div class="form-group">
-                                                            <h5>Subjective Mark<span class="text-danger">*</span></h5>
+                                                            <h6>{{ __('admin.subjective_mark') }}<span class="text-danger">*</span></h6>
                                                             <div class="controls">
                                                                 <input type="text" name="subjective_mark[]"
                                                                     class="form-control">
@@ -108,7 +107,7 @@
                                             </div>
                                             <div class="text-xs-right">
                                                 <input type="submit" class="btn btn-success mb-5"
-                                                    style="float: left" value="Submit">
+                                                    style="float: left" value="{{ __('admin.submit') }}">
                                             </div>
                                         </div>
                                     </div>
@@ -128,11 +127,11 @@
 
                     <div class="col-md-3">
                         <div class="form-group">
-                            <h5>Student Subject<span class="text-danger">*</span></h5>
+                            <h6>{{ __('admin.student_subject') }}<span class="text-danger">*</span></h6>
                             <div class="controls">
                                 <select name="subject_id[]" required="" class="form-control">
                                     <option value="" selected="" disabled="">
-                                        Select Subject</option>
+                                        {{ __('admin.select_subject') }}</option>
                                     @foreach ($subjects as $subject)
                                         <option value="{{ $class->id }}">
                                             {{ $subject->name }}</option>
@@ -145,7 +144,7 @@
                     </div>
                     <div class="col-md-3">
                         <div class="form-group">
-                            <h5>Full Mark<span class="text-danger">*</span></h5>
+                            <h6>{{ __('admin.full_mark') }}<span class="text-danger">*</span></h6>
                             <div class="controls">
                                 <input type="text" name="full_mark[]" class="form-control">
                             </div>
@@ -153,7 +152,7 @@
                     </div>
                     <div class="col-md-3">
                         <div class="form-group">
-                            <h5>Pass Mark<span class="text-danger">*</span></h5>
+                            <h6>{{ __('admin.pass_mark') }}<span class="text-danger">*</span></h6>
                             <div class="controls">
                                 <input type="text" name="pass_mark[]" class="form-control">
                             </div>
@@ -161,7 +160,7 @@
                     </div>
                     <div class="col-md-2">
                         <div class="form-group">
-                            <h5>Subjective Mark<span class="text-danger">*</span></h5>
+                            <h6>{{ __('admin.subjective_mark') }}<span class="text-danger">*</span></h6>
                             <div class="controls">
                                 <input type="text" name="subjective_mark[]" class="form-control">
                             </div>

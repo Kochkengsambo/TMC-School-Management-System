@@ -26,7 +26,7 @@
                 <!-- Basic Forms -->
                 <div class="box">
                     <div class="box-header with-border">
-                        <h4 class="box-title">Add Student</h4>
+                        <h5 class="box-title">{{ __('admin.add_student') }}</h5>
                     </div>
                     <div class="box-body">
                         <div class="row">
@@ -39,7 +39,7 @@
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Student Name <span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.student_name') }} <span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <input type="text" name="name" class="form-control">
                                                             @error('name')
@@ -50,7 +50,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Father's Name <span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.father_name') }} <span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <input type="text" name="fname" class="form-control">
                                                             @error('fname')
@@ -61,7 +61,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Mother's Name <span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.mother_name') }} <span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <input type="text" name="mname" class="form-control">
                                                             @error('mname')
@@ -75,14 +75,13 @@
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Gender<span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.gender') }}<span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <select name="gender" id="gender" required=""
                                                                 class="form-control">
-                                                                <option value="" selected="" disabled="">Select
-                                                                    Gender</option>
-                                                                <option value="Male">Male</option>
-                                                                <option value="Female">Female</option>
+                                                                <option value="" selected="" disabled="">{{__('admin.select_gender')}}</option>
+                                                                <option value="Male">{{ __('admin.male') }}</option>
+                                                                <option value="Female">{{ __('admin.female') }}</option>
                                                             </select>
                                                             @error('gender')
                                                                 <span class="text-danger">{{ $message }}</span>
@@ -92,7 +91,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Mobile Number<span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.mobile_no') }}<span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <input type="text" name="mobile" class="form-control">
                                                             @error('mobile')
@@ -103,7 +102,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Address<span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.address') }}<span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <input type="text" name="address" class="form-control">
                                                             @error('address')
@@ -118,15 +117,14 @@
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Religion<span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.religion') }}<span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <select name="religion" id="religion" required=""
                                                                 class="form-control">
-                                                                <option value="" selected="" disabled="">Select
-                                                                    Religion</option>
-                                                                <option value="Buddhism">Buddhism</option>
-                                                                <option value="Jesus Christ">Jesus Christ</option>
-                                                                <option value="Islam">Islam</option>
+                                                                <option value="" selected="" disabled="">{{ __('admin.select_religion') }}</option>
+                                                                <option value="Buddhism">{{ __('admin.buddhism') }}</option>
+                                                                <option value="Jesus Christ">{{ __('admin.jesus_christ') }}</option>
+                                                                <option value="Islam">{{ __('admin.islam') }}</option>
                                                             </select>
                                                             @error('religion')
                                                                 <span class="text-danger">{{ $message }}</span>
@@ -136,7 +134,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Date Of Birth<span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.dob') }}<span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <input type="date" name="dob" class="form-control">
                                                             @error('dob')
@@ -147,7 +145,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Discount<span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.discount') }}<span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <input type="text" name="discount" class="form-control">
                                                             @error('discount')
@@ -162,12 +160,11 @@
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Year<span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.year') }}<span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <select name="year_id" required="" class="form-control">
                                                                 <option value="" selected="" disabled="">
-                                                                    Select
-                                                                    Year</option>
+                                                                    {{__('admin.select_year')}}</option>
                                                                 @foreach ($years as $year)
                                                                     <option value="{{ $year->id }}">
                                                                         {{ $year->name }}</option>
@@ -181,12 +178,11 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Class<span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.class') }}<span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <select name="class_id" required="" class="form-control">
                                                                 <option value="" selected="" disabled="">
-                                                                    Select
-                                                                    Class</option>
+                                                                    {{__('admin.select_class')}}</option>
                                                                 @foreach ($classes as $class)
                                                                     <option value="{{ $class->id }}">
                                                                         {{ $class->name }}</option>
@@ -200,12 +196,11 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Group<span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.group') }}<span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <select name="group_id" required="" class="form-control">
                                                                 <option value="" selected="" disabled="">
-                                                                    Select
-                                                                    Group</option>
+                                                                    {{__('admin.select_group')}}</option>
                                                                 @foreach ($groups as $group)
                                                                     <option value="{{ $group->id }}">
                                                                         {{ $group->name }}</option>
@@ -223,12 +218,11 @@
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Shift<span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.shift') }}<span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <select name="shift_id" required="" class="form-control">
                                                                 <option value="" selected="" disabled="">
-                                                                    Select
-                                                                    Shift</option>
+                                                                    {{ __('admin.select_shift') }}</option>
                                                                 @foreach ($shifts as $shift)
                                                                     <option value="{{ $shift->id }}">
                                                                         {{ $shift->name }}</option>
@@ -242,7 +236,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Profile Image<span class="text-danger">*</span></h5>
+                                                        <h5>{{ __('admin.pro_img') }}<span class="text-danger">*</span></h5>
                                                         <div class="controls">
                                                             <input type="file" name="image" class="form-control"
                                                                 id="image">
@@ -264,7 +258,7 @@
 
                                             <div class="text-xs-right">
                                                 <input type="submit" class="btn btn-success mb-5" style="float: right"
-                                                    value="Submit">
+                                                    value="{{ __('admin.submit') }}">
                                             </div>
                                         </div>
                                     </div>

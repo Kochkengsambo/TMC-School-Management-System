@@ -31,7 +31,7 @@ return [
     'action'                        => 'សកម្មភាព',
     'sl'                            => 'រ/ល',
 
-    #=================[User Management]==================
+    #=================[Management User]==================
     'update_user'                   => 'ធ្វើបច្ចុប្បន្នភាពអ្នកប្រើប្រាស់',
     'user_role'                     => 'តួនាទីអ្នកប្រើប្រាស់',
     'select_role'                   => 'ជ្រើសរើសតួនាទី',
@@ -68,6 +68,88 @@ return [
      'add_student_year'              => 'បន្ថែមឆ្នាំសិស្ស',
      'student_year_name'             => 'ឈ្មោះឆ្នាំសិស្ស',
      'edit_student_year'             => 'កែសម្រួលឆ្នាំសិស្ស',
+     'student_group_list'            => 'បញ្ជីក្រុមសិស្ស',
+     'add_student_group'             => 'បន្ថែមក្រុមសិស្ស',
+     'student_group_name'            => 'ឈ្មោះក្រុមសិស្ស',
+     'edit_student_group'            => 'កែសម្រួលក្រុមសិស្ស',
+     'student_shift_list'            => 'បញ្ជីផ្លាស់ប្តូរសិស្ស',
+     'add_student_shift'             => 'បន្ថែមការផ្លាស់ប្តូរសិស្ស',
+     'student_shift_name'            => 'ផ្លាស់ប្តូរឈ្មោះសិស្ស',
+     'edit_student_shift'            => 'កែសម្រួលការផ្លាស់ប្តូរសិស្ស',
+     'student_fee_cat_list'          => 'បញ្ជីប្រភេទថ្លៃសេវាសិស្ស',
+     'add_fee_category'              => 'បន្ថែមប្រភេទថ្លៃសេវា',
+     'fee_category_name'             => 'ឈ្មោះប្រភេទថ្លៃសេវា',
+     'edit_fee_category'             => 'កែសម្រួលប្រភេទថ្លៃសេវា',
+     'student_fee_amount_list'       => 'បញ្ជីចំនួនថ្លៃសិក្សា',
+     'add_fee_amount'                => 'បន្ថែមចំនួនថ្លៃសេវា',
+     'fee_category'                  => 'ប្រភេទថ្លៃសេវា',
+     'select_fee_category'           => 'ជ្រើសរើសប្រភេទថ្លៃសេវា',
+     'select_student_class'          => 'ជ្រើសរើសថ្នាក់សិស្ស',
+     'amount'                        => 'ចំនួនទឹកប្រាក់',
+     'edit_fee_amount'               => 'កែសម្រួលចំនួនថ្លៃសេវា',
+     'fee_amount_details'            => 'ព័ត៌មានលម្អិតអំពីចំនួនថ្លៃសេវា',
+     'class_name'                    => 'ឈ្មោះថ្នាក់',
+     'exam_type_list'                => 'បញ្ជីប្រភេទប្រឡង',
+     'add_exam_type'                 => 'បន្ថែមប្រភេទប្រឡង',
+     'exam_type_name'                => 'ឈ្មោះប្រភេទប្រឡង',
+     'edit_exam_type'                => 'កែសម្រួលប្រភេទប្រឡង',
+     'school_sub_list'               => 'បញ្ជីមុខវិជ្ជាសាលា',
+     'add_school_sub'                => 'បន្ថែមមុខវិជ្ជាសាលា',
+     'school_sub_name'               => 'ឈ្មោះមុខវិជ្ជាសាលា',
+     'edit_school_sub'               => 'កែសម្រួលមុខវិជ្ជាសាលា',
+     'student_assign_sub_list'       => 'បញ្ជីមុខវិជ្ជាចាត់តាំងសិស្ស',
+     'add_assign_sub'                => 'បន្ថែមមុខវិជ្ជាចាត់តាំង',
+     'select_class'                  => 'ជ្រើសរើសថ្នាក់',
+     'student_subject'               => 'មុខវិជ្ជាសិស្ស',
+     'select_subject'                => 'ជ្រើសរើសប្រធានបទ',
+     'full_mark'                     => 'សញ្ញាសម្គាល់ពេញ',
+     'pass_mark'                     => 'សញ្ញាសម្គាល់ជាប់',
+     'subjective_mark'               => 'សញ្ញាសម្គាល់មុខវិជ្ជា',
+     'edit_assign_sub'               => 'កែសម្រួលប្រធានបទ',
+     'assign_sub_details'            => 'កំណត់ប្រធានបទលម្អិត',
+     'subject'                       => 'ប្រធានបទ',
+     'designation_list'              => 'បញ្ជីការកំណត់',
+     'add_designation'               => 'បន្ថែមការកំណត់',
+     'designation_name'              => 'ឈ្មោះការកំណត់',
+     'edit_designation'              => 'កែសម្រួលការកំណត់',
+     'school_designation'            => 'ការកំណត់សាលា',
+
+ #=================[Student Management]==================
+    'student'                       => 'សិស្ស',
+    'search'                        => 'ស្វែងរក',
+    'year'                          => 'ឆ្នាំ',
+    'select_year'                   => 'ជ្រើសរើសឆ្នាំ',
+    'class'                         => 'ថ្នាក់',
+    'student_list'                  => 'បញ្ជីឈ្មោះសិស្ស',
+    'add_student'                   => 'បន្ថែមសិស្ស',
+    'id_no'                         => 'លេខ ID',
+    'img'                           => 'រូបភាព',
+    'student_name'                  => 'ឈ្មោះសិស្ស',
+    'father_name'                   => 'ឈ្មោះឪពុក',
+    'mother_name'                   => 'ឈ្មោះម្តាយ',
+    'religion'                      => 'សាសនា',
+    'select_religion'               => 'ជ្រើសរើសសាសនា',
+    'buddhism'                      => 'ពុទ្ធសាសនា',
+    'jesus_christ'                  => 'ព្រះយេស៊ូវគ្រីស្ទ',
+    'islam'                         => 'អ៊ីស្លាម',
+    'dob'                           => 'ថ្ងៃខែឆ្នាំកំណើត',
+    'discount'                      => 'បញ្ចុះតម្លៃ',
+    'group'                         => 'ក្រុម',
+    'select_group'                  => 'ជ្រើសរើសក្រុម',
+    'shift'                         => 'ប្ដូរ',
+    'select_shift'                  => 'ជ្រើសរើសការប្ដូរ',
+    'edit_student'                  => 'កែសម្រួលសិស្ស',
+    'roll_generator'                => 'អ្នកបង្កើតតួនាទី',
+
+
+
+
+
+
+
+
+
+
 
 
 

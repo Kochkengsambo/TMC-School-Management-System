@@ -25,7 +25,7 @@
                 <!-- Basic Forms -->
                 <div class="box">
                     <div class="box-header with-border">
-                        <h4 class="box-title">Add School Subject</h4>
+                        <h5 class="box-title">{{ __('admin.add_school_sub') }}</h5>
                     </div>
                     <div class="box-body">
                         <div class="row">
@@ -35,7 +35,7 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <h5>School Subject Name <span class="text-danger">*</span></h5>
+                                                <h5>{{ __('admin.school_sub_name') }} <span class="text-danger">*</span></h5>
                                                 <div class="controls">
                                                     <input type="text" name="name" class="form-control">
                                                     @error('name')
@@ -45,7 +45,7 @@
                                             </div>
                                             <div class="text-xs-right">
                                                 <input type="submit" class="btn btn-success mb-5"
-                                                    style="float: right" value="Submit">
+                                                    style="float: right" value="{{ __('admin.submit') }}">
                                             </div>
                                         </div>
                                     </div>

@@ -25,7 +25,7 @@
                 <!-- Basic Forms -->
                 <div class="box">
                     <div class="box-header with-border">
-                        <h4 class="box-title">Add Fee Amount</h4>
+                        <h5 class="box-title">{{ __('admin.add_fee_amount') }}</h5>
                     </div>
                     <div class="box-body">
                         <div class="row">
@@ -37,12 +37,11 @@
                                             <div class="add_item">
 
                                                 <div class="form-group">
-                                                    <h5>Fee Category<span class="text-danger">*</span></h5>
+                                                    <h6>{{ __('admin.fee_category') }}<span class="text-danger">*</span></h6>
                                                     <div class="controls">
                                                         <select name="fee_category_id" required=""
                                                             class="form-control">
-                                                            <option value="" selected="" disabled="">Select
-                                                                Fee Category</option>
+                                                            <option value="" selected="" disabled="">{{ __('admin.select_fee_category') }}</option>
                                                             @foreach ($fee_categories as $category)
                                                                 <option value="{{ $category->id }}">{{ $category->name }}
                                                                 </option>
@@ -56,13 +55,12 @@
                                                 <div class="row">
                                                     <div class="col-md-5">
                                                         <div class="form-group">
-                                                            <h5>Student Class<span class="text-danger">*</span></h5>
+                                                            <h6>{{ __('admin.student_class') }}<span class="text-danger">*</span></h6>
                                                             <div class="controls">
                                                                 <select name="class_id[]" required=""
                                                                     class="form-control">
                                                                     <option value="" selected="" disabled="">
-                                                                        Select
-                                                                        Fee Category</option>
+                                                                        {{ __('admin.select_student_class') }}</option>
                                                                     @foreach ($classes as $class)
                                                                         <option value="{{ $class->id }}">
                                                                             {{ $class->name }}</option>
@@ -75,7 +73,7 @@
                                                     </div>
                                                     <div class="col-md-5">
                                                         <div class="form-group">
-                                                            <h5>Amount<span class="text-danger">*</span></h5>
+                                                            <h6>{{ __('admin.amount') }}<span class="text-danger">*</span></h6>
                                                             <div class="controls">
                                                                 <input type="text" name="amount[]" class="form-control">
                                                             </div>
@@ -91,7 +89,7 @@
                                             </div>
                                             <div class="text-xs-right">
                                                 <input type="submit" class="btn btn-success mb-5"
-                                                    style="float: left" value="Submit">
+                                                    style="float: left" value="{{ __('admin.submit') }}">
                                             </div>
                                         </div>
                                     </div>
@@ -111,11 +109,10 @@
 
                     <div class="col-md-5">
                         <div class="form-group">
-                            <h5>Student Class<span class="text-danger">*</span></h5>
+                            <h6>{{ __('admin.student_class') }}<span class="text-danger">*</span></h6>
                             <div class="controls">
                                 <select name="class_id[]" required="" class="form-control">
-                                    <option value="" selected="" disabled="">Select
-                                        Fee Category</option>
+                                    <option value="" selected="" disabled="">{{__('admin.select_student_class')}}</option>
                                     @foreach ($classes as $class)
                                         <option value="{{ $class->id }}">{{ $class->name }}</option>
                                     @endforeach
@@ -127,7 +124,7 @@
                     </div>
                     <div class="col-md-5">
                         <div class="form-group">
-                            <h5>Amount<span class="text-danger">*</span></h5>
+                            <h6>{{ __('admin.amount') }}<span class="text-danger">*</span></h6>
                             <div class="controls">
                                 <input type="text" name="amount[]" class="form-control">
                             </div>

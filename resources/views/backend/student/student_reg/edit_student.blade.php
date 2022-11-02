@@ -26,7 +26,7 @@
                 <!-- Basic Forms -->
                 <div class="box">
                     <div class="box-header with-border">
-                        <h4 class="box-title">Edit Student</h4>
+                        <h5 class="box-title">{{ __('admin.edit_student') }}</h5>
                     </div>
                     <div class="box-body">
                         <div class="row">
@@ -42,7 +42,7 @@
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Student Name <span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.student_name') }} <span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <input type="text" name="name" class="form-control"
                                                                 required="" value="{{ $editData['student']['name'] }}">
@@ -54,7 +54,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Father's Name <span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.father_name') }} <span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <input type="text" name="fname" class="form-control"
                                                                 required="" value="{{ $editData['student']['fname'] }}">
@@ -66,7 +66,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Mother's Name <span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.mother_name') }} <span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <input type="text" name="mname" class="form-control"
                                                                 required="" value="{{ $editData['student']['mname'] }}">
@@ -81,18 +81,17 @@
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Gender<span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.gender') }}<span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <select name="gender" id="gender" required=""
                                                                 class="form-control">
-                                                                <option value="" selected="" disabled="">Select
-                                                                    Gender</option>
+                                                                <option value="" selected="" disabled="">{{__('admin.select_gender')}}</option>
                                                                 <option value="Male"
                                                                     {{ $editData['student']['gender'] == 'Male' ? 'selected' : '' }}>
-                                                                    Male</option>
+                                                                    {{ __('admin.male') }}</option>
                                                                 <option value="Female"
                                                                     {{ $editData['student']['gender'] == 'Female' ? 'selected' : '' }}>
-                                                                    Female</option>
+                                                                    {{ __('admin.female') }}</option>
                                                             </select>
                                                             @error('gender')
                                                                 <span class="text-danger">{{ $message }}</span>
@@ -102,7 +101,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Mobile Number<span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.mobile_no') }}<span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <input type="text" name="mobile" class="form-control"
                                                                 required=""
@@ -115,7 +114,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Address<span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.address') }}<span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <input type="text" name="address" class="form-control"
                                                                 value="{{ $editData['student']['address'] }}">
@@ -131,21 +130,20 @@
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Religion<span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.religion') }}<span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <select name="religion" id="religion" required=""
                                                                 class="form-control">
-                                                                <option value="" selected="" disabled="">Select
-                                                                    Religion</option>
+                                                                <option value="" selected="" disabled="">{{__('admin.select_religion')}}</option>
                                                                 <option
                                                                     value="Buddhism"{{ $editData['student']['religion'] == 'Buddhism' ? 'selected' : '' }}>
-                                                                    Buddhism</option>
+                                                                    {{ __('admin.buddhism') }}</option>
                                                                 <option
                                                                     value="Jesus Christ"{{ $editData['student']['religion'] == 'Jesus Christ' ? 'selected' : '' }}>
-                                                                    Jesus Christ</option>
+                                                                    {{ __('admin.jesus_christ') }}</option>
                                                                 <option
                                                                     value="Islam"{{ $editData['student']['religion'] == 'Islam' ? 'selected' : '' }}>
-                                                                    Islam</option>
+                                                                    {{ __('admin.islam') }}</option>
                                                             </select>
                                                             @error('religion')
                                                                 <span class="text-danger">{{ $message }}</span>
@@ -155,7 +153,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Date Of Birth<span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.dob') }}<span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <input type="date" name="dob" class="form-control"
                                                                 required="" value="{{ $editData['student']['dob'] }}">
@@ -167,7 +165,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Discount<span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.discount') }}<span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <input type="text" name="discount" class="form-control"
                                                                 required=""
@@ -184,12 +182,11 @@
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Year<span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.year') }}<span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <select name="year_id" required="" class="form-control">
                                                                 <option value="" selected="" disabled="">
-                                                                    Select
-                                                                    Year</option>
+                                                                    {{__('admin.select_year')}}</option>
                                                                 @foreach ($years as $year)
                                                                     <option value="{{ $year->id }}"
                                                                         {{ $editData->year_id == $year->id ? 'selected' : '' }}>
@@ -204,12 +201,11 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Class<span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.class') }}<span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <select name="class_id" required="" class="form-control">
                                                                 <option value="" selected="" disabled="">
-                                                                    Select
-                                                                    Class</option>
+                                                                    {{__('admin.select_class')}}</option>
                                                                 @foreach ($classes as $class)
                                                                     <option value="{{ $class->id }}"
                                                                         {{ $editData->class_id == $class->id ? 'selected' : '' }}>
@@ -224,12 +220,11 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Group<span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.group') }}<span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <select name="group_id" required="" class="form-control">
                                                                 <option value="" selected="" disabled="">
-                                                                    Select
-                                                                    Group</option>
+                                                                   {{__('admin.select_group')}}</option>
                                                                 @foreach ($groups as $group)
                                                                     <option value="{{ $group->id }}"
                                                                         {{ $editData->group_id == $group->id ? 'selected' : '' }}>
@@ -248,12 +243,11 @@
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Shift<span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.shift') }}<span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <select name="shift_id" required="" class="form-control">
                                                                 <option value="" selected="" disabled="">
-                                                                    Select
-                                                                    Shift</option>
+                                                                    {{__('admin.select_shift')}}</option>
                                                                 @foreach ($shifts as $shift)
                                                                     <option value="{{ $shift->id }}"
                                                                         {{ $editData->shift_id == $shift->id ? 'selected' : '' }}>
@@ -268,7 +262,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Profile Image<span class="text-danger">*</span></h5>
+                                                        <h6>{{ __('admin.pro_img') }}<span class="text-danger">*</span></h6>
                                                         <div class="controls">
                                                             <input type="file" name="image" class="form-control"
                                                                 id="image">
@@ -294,7 +288,7 @@
 
                                             <div class="text-xs-right">
                                                 <input type="submit" class="btn btn-success mb-5" style="float: right"
-                                                    value="Update">
+                                                    value="{{ __('admin.update') }}">
                                             </div>
                                         </div>
                                     </div>

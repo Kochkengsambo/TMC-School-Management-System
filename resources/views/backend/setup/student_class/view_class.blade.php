@@ -30,8 +30,7 @@
                         <div class="box">
                             <div class="box-header with-border">
                                 <h5 class="box-title">{{ __('admin.student_class_list') }}</h5>
-                                <a href="{{ route('student.class.add') }}" style="float: right"
-                                    class="btn btn-primary mb-5">
+                                <a href="{{ route('student.class.add') }}" style="float: right" class="btn btn-primary mb-5">
                                     <i class="mdi mdi-library-plus"></i> {{ __('admin.add_student_class') }}</a>
                             </div>
                             <!-- /.box-header -->
@@ -40,7 +39,7 @@
                                     <table id="example1" class="table table-bordered table-striped">
                                         <thead class="bg-secondary">
                                             <tr>
-                                                <th class="text-center" width="5%">{{ __('admin.sl') }}</th>
+                                                <th class="text-center" width="10%">{{ __('admin.sl') }}</th>
                                                 <th>{{ __('admin.name') }}</th>
                                                 <th class="text-center" width="20%">{{ __('admin.action') }}</th>
                                             </tr>
@@ -59,14 +58,14 @@
                                                     <td>{{ $student->name }}</td>
                                                     <td class="text-center">
                                                         <a href="{{ route('student.class.edit', $student->id) }}"
-                                                            class="btn btn-primary mb-5"><i
-                                                                class="mdi mdi-account-edit"></i>Edit</a>
+                                                            class="btn btn-primary mb-5">
+                                                            <i class="fa fa-edit" aria-hidden="true"></i></a>
                                                         <a href="{{ route('student.class.delete', $student->id) }}"
-                                                            class="btn btn-danger mb-5" id="delete"><i
-                                                                class="mdi mdi-account-remove"></i>Delete</a>
+                                                            class="btn btn-danger mb-5" id="delete">
+                                                            <i class="fa fa-trash-o" aria-hidden="true"></i></a>
 
 
-                                                            </td>
+                                                    </td>
                                                 </tr>
                                             @endforeach
 

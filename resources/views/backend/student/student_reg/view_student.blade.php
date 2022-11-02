@@ -28,7 +28,7 @@
                     <div class="col-12">
                         <div class="box bb-3 border-warning">
                             <div class="box-header">
-                                <h4 class="box-title">Student <strong>Search</strong></h4>
+                                <h5 class="box-title">{{ __('admin.student') }} <strong>{{ __('admin.search') }}</strong></h5>
                             </div>
 
                             <div class="box-body">
@@ -42,10 +42,10 @@
                                         <div class="col-md-4">
 
                                             <div class="form-group">
-                                                <h5>Year <span class="text-danger"> </span></h5>
+                                                <h6>{{ __('admin.year') }} <span class="text-danger"> </span></h6>
                                                 <div class="controls">
                                                     <select name="year_id" required="" class="form-control">
-                                                        <option value="" selected="" disabled="">Select Year
+                                                        <option value="" selected="" disabled="">{{ __('admin.select_year') }}
                                                         </option>
                                                         @foreach ($years as $year)
                                                             <option value="{{ $year->id }}"
@@ -65,10 +65,10 @@
                                         <div class="col-md-4">
 
                                             <div class="form-group">
-                                                <h5>Class <span class="text-danger"> </span></h5>
+                                                <h6>{{ __('admin.class') }} <span class="text-danger"> </span></h6>
                                                 <div class="controls">
                                                     <select name="class_id" required="" class="form-control">
-                                                        <option value="" selected="" disabled="">Select Class
+                                                        <option value="" selected="" disabled="">{{ __('admin.select_class') }}
                                                         </option>
                                                         @foreach ($classes as $class)
                                                             <option value="{{ $class->id }}"
@@ -88,7 +88,13 @@
                                             {{-- <input type="submit" class="btn btn-rounded btn-dark mb-5" name="search"
                                                 value="Search"> --}}
                                             <input type="submit" class="btn btn-success mb-5" name="search"
-                                                value="Search">
+                                                value="{{ __('admin.search') }}">
+                                                {{-- <i class="fa fa-search" aria-hidden="true"></i> --}}
+
+                                                {{-- <div class="clearfix">
+                                                    <button type="button" class="btn btn-success mb-5" name="search"><i class="fa fa-edit" aria-hidden="true"></i>Default</button>
+
+                                                </div> --}}
 
                                         </div> <!-- End Col md 4 -->
 
@@ -108,11 +114,11 @@
 
                         <div class="box">
                             <div class="box-header with-border">
-                                <h3 class="box-title">Student List</h3>
+                                <h3 class="box-title">{{ __('admin.student_list') }}</h3>
                                 <a href="{{ route('student.registration.add') }}" style="float: right"
                                     class="btn btn-primary mb-5">
                                     <i class="mdi mdi-library-plus"></i>
-                                    <span>Add Student</span>
+                                    <span>{{ __('admin.add_student') }}</span>
                                 </a>
                             </div>
                             <!-- /.box-header -->
@@ -122,34 +128,34 @@
                                     @if (!@search)
                                         <table id="example1" class="table table-bordered table-striped">
                                             {{-- <thead class="bg-secondary"> --}}
-                                            <thead>
+                                            <thead class="bg-secondary">
                                                 <tr>
-                                                    <th class="text-center" width="5%">SL</th>
-                                                    <th>Name</th>
-                                                    <th>ID No</th>
-                                                    <th>Roll</th>
-                                                    <th>Year</th>
-                                                    <th>Class</th>
-                                                    <th>Image</th>
+                                                    <th class="text-center" width="10%">{{ __('admin.sl') }}</th>
+                                                    <th>{{ __('admin.name') }}</th>
+                                                    <th>{{ __('admin.id_no') }}</th>
+                                                    <th>{{ __('admin.roll') }}</th>
+                                                    <th>{{ __('admin.year') }}</th>
+                                                    <th>{{ __('admin.class') }}</th>
+                                                    <th>{{ __('admin.img') }}</th>
                                                     @if (Auth::user()->role == 'Admin')
-                                                        <th>Code</th>
+                                                        <th>{{ __('admin.code') }}</th>
                                                     @endif
-                                                    <th class="text-center" width="20%">Action</th>
+                                                    <th class="text-center" width="20%">{{ __('admin.action') }}</th>
                                                 </tr>
                                             </thead>
                                             <tfoot>
                                                 <tr>
-                                                    <th class="text-center">SL</th>
-                                                    <th>Name</th>
-                                                    <th>ID No</th>
-                                                    <th>Roll</th>
-                                                    <th>Year</th>
-                                                    <th>Class</th>
-                                                    <th>Image</th>
+                                                    <th class="text-center">{{ __('admin.sl') }}</th>
+                                                    <th>{{ __('admin.name') }}</th>
+                                                    <th>{{ __('admin.id_no') }}</th>
+                                                    <th>{{ __('admin.roll') }}</th>
+                                                    <th>{{ __('admin.year') }}</th>
+                                                    <th>{{ __('admin.class') }}</th>
+                                                    <th>{{ __('admin.img') }}</th>
                                                     @if (Auth::user()->role == 'Admin')
-                                                        <th>Code</th>
+                                                        <th>{{ __('admin.code') }}</th>
                                                     @endif
-                                                    <th class="text-center">Action</th>
+                                                    <th class="text-center">{{ __('admin.action') }}</th>
                                                 </tr>
                                             </tfoot>
                                             <tbody>
@@ -188,40 +194,40 @@
                                         </table>
                                     @else
                                         <table id="example1" class="table table-bordered table-striped">
-                                            <thead>
+                                            <thead class="bg-secondary">
                                                 <tr>
-                                                    <th class="text-center" width="5%">SL</th>
-                                                    <th>Name</th>
-                                                    <th>ID No</th>
-                                                    <th>Roll</th>
-                                                    <th>Year</th>
-                                                    <th>Class</th>
-                                                    <th>Image</th>
+                                                    <th class="text-center" width="10%">{{ __('admin.sl') }}</th>
+                                                    <th>{{ __('admin.name') }}</th>
+                                                    <th>{{ __('admin.id_no') }}</th>
+                                                    <th>{{ __('admin.roll') }}</th>
+                                                    <th>{{ __('admin.year') }}</th>
+                                                    <th>{{ __('admin.class') }}</th>
+                                                    <th>{{ __('admin.img') }}</th>
                                                     @if (Auth::user()->role == 'Admin')
-                                                        <th>Code</th>
+                                                        <th>{{ __('admin.code') }}</th>
                                                     @endif
-                                                    <th class="text-center" width="20%">Action</th>
+                                                    <th class="text-center" width="20%">{{ __('admin.action') }}</th>
                                                 </tr>
                                             </thead>
                                             <tfoot>
                                                 <tr>
-                                                    <th class="text-center">SL</th>
-                                                    <th>Name</th>
-                                                    <th>ID No</th>
-                                                    <th>Roll</th>
-                                                    <th>Year</th>
-                                                    <th>Class</th>
-                                                    <th>Image</th>
+                                                    <th class="text-center">{{ __('admin.sl') }}</th>
+                                                    <th>{{ __('admin.name') }}</th>
+                                                    <th>{{ __('admin.id_no') }}</th>
+                                                    <th>{{ __('admin.roll') }}</th>
+                                                    <th>{{ __('admin.year') }}</th>
+                                                    <th>{{ __('admin.class') }}</th>
+                                                    <th>{{ __('admin.img') }}</th>
                                                     @if (Auth::user()->role == 'Admin')
-                                                        <th>Code</th>
+                                                        <th>{{ __('admin.code') }}</th>
                                                     @endif
-                                                    <th class="text-center">Action</th>
+                                                    <th class="text-center">{{ __('admin.action') }}</th>
                                                 </tr>
                                             </tfoot>
                                             <tbody>
                                                 @foreach ($allData as $key => $value)
                                                     <tr>
-                                                        <td>{{ $key + 1 }}</td>
+                                                        <td class="text-center">{{ $key + 1 }}</td>
                                                         <td> {{ $value['student']['name'] }}</td>
                                                         <td> {{ $value['student']['id_no'] }}</td>
                                                         <td> {{ $value->roll }} </td>
@@ -235,15 +241,15 @@
                                                         <td>
                                                             <a title="Edit"
                                                                 href="{{ route('student.registration.edit', $value->student_id) }}"
-                                                                class="btn btn-info"> <i class="fa fa-edit"></i> </a>
+                                                                class="btn btn-primary"> <i class="fa fa-edit"></i> </a>
 
                                                             <a title="Promotion"
                                                                 href="{{ route('student.registration.promotion', $value->student_id) }}"
-                                                                class="btn btn-primary"><i class="fa fa-check"></i></a>
+                                                                class="btn btn-info"><i class="fa fa-fw fa-check-square-o"></i></a>
 
                                                             <a target="_blank" title="Details"
                                                                 href="{{ route('student.registration.details', $value->student_id) }}"
-                                                                class="btn btn-danger"><i class="fa fa-eye"></i></a>
+                                                                class="btn btn-success"><i class="fa fa-eye"></i></a>
 
                                                         </td>
 

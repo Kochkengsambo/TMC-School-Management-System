@@ -29,10 +29,10 @@
 
                         <div class="box">
                             <div class="box-header with-border">
-                                <h3 class="box-title">Student Assign Subject List</h3>
+                                <h5 class="box-title">{{ __('admin.student_assign_sub_list') }}</h5>
                                 <a href="{{ route('assign.subject.add') }}" style="float: right" class="btn btn-primary mb-5">
                                     <i class="mdi mdi-library-plus"></i>
-                                    <span>Add Assign Subject</span>
+                                    <span>{{ __('admin.add_assign_sub') }}</span>
                                 </a>
                             </div>
                             <!-- /.box-header -->
@@ -42,16 +42,16 @@
                                         {{-- <table id="example1" class="table table-bordered"> --}}
                                         <thead class="bg-secondary">
                                             <tr>
-                                                <th class="text-center" width="5%">SL</th>
-                                                <th>Class Name</th>
-                                                <th class="text-center" width="20%">Action</th>
+                                                <th class="text-center" width="10%">{{ __('admin.sl') }}</th>
+                                                <th>{{ __('admin.class_name') }}</th>
+                                                <th class="text-center" width="20%">{{ __('admin.action') }}</th>
                                             </tr>
                                         </thead>
                                         <tfoot>
                                             <tr>
-                                                <th class="text-center">SL</th>
-                                                <th>Class Name</th>
-                                                <th class="text-center">Action</th>
+                                                <th class="text-center">{{ __('admin.sl') }}</th>
+                                                <th>{{ __('admin.class_name') }}</th>
+                                                <th class="text-center">{{ __('admin.action') }}</th>
                                             </tr>
                                         </tfoot>
                                         <tbody>
@@ -61,11 +61,11 @@
                                                     <td>{{ $assign['student_class']['name'] }}</td>
                                                     <td class="text-center">
                                                         <a href="{{ route('assign.subject.edit', $assign->class_id) }}"
-                                                            class="btn btn-primary mb-5"><i
-                                                                class="mdi mdi-account-edit"></i>Edit</a>
+                                                            class="btn btn-primary mb-5">
+                                                            <i class="fa fa-edit" aria-hidden="true"></i></a>
                                                         <a href="{{ route('assign.subject.details', $assign->class_id) }}"
-                                                            class="btn btn-success mb-5"><i
-                                                                class="mdi mdi-account-card-details"></i>Details</a>
+                                                            class="btn btn-success mb-5">
+                                                            <i class="fa fa-eye" aria-hidden="true"></i></a>
 
 
                                                     </td>

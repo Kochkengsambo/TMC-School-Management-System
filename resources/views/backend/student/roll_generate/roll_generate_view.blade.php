@@ -15,7 +15,7 @@
                     <div class="col-12">
                         <div class="box bb-3 border-warning">
                             <div class="box-header">
-                                <h4 class="box-title">Student <strong>Roll Generator</strong></h4>
+                                <h5 class="box-title">{{ __('admin.student') }} <strong>{{ __('admin.roll_generator') }}</strong></h5>
                             </div>
 
                             <div class="box-body">
@@ -29,11 +29,11 @@
                                         <div class="col-md-4">
 
                                             <div class="form-group">
-                                                <h5>Year <span class="text-danger"> </span></h5>
+                                                <h6>Year <span class="text-danger"> </span></h6>
                                                 <div class="controls">
                                                     <select name="year_id" id="year_id" required=""
                                                         class="form-control">
-                                                        <option value="" selected="" disabled="">Select Year
+                                                        <option value="" selected="" disabled="">{{ __('admin.select_year') }}
                                                         </option>
                                                         @foreach ($years as $year)
                                                             <option value="{{ $year->id }}">{{ $year->name }}</option>
@@ -51,11 +51,11 @@
                                         <div class="col-md-4">
 
                                             <div class="form-group">
-                                                <h5>Class <span class="text-danger"> </span></h5>
+                                                <h6>{{ __('admin.class') }} <span class="text-danger"> </span></h6>
                                                 <div class="controls">
                                                     <select name="class_id" id="class_id" required=""
                                                         class="form-control">
-                                                        <option value="" selected="" disabled="">Select Class
+                                                        <option value="" selected="" disabled="">{{ __('admin.select_class') }}
                                                         </option>
                                                         @foreach ($classes as $class)
                                                             <option value="{{ $class->id }}">{{ $class->name }}</option>
@@ -70,7 +70,7 @@
 
                                         <div class="col-md-4" style="padding-top: 25px;">
 
-                                            <a id="search" class="btn btn-success" name="search"> Search</a>
+                                            <a id="search" class="btn btn-success" name="search"> {{ __('admin.search') }}</a>
 
                                         </div> <!-- End Col md 4 -->
                                     </div><!--  end row -->
@@ -84,11 +84,11 @@
                                             <table class="table table-bordered table-striped" style="width: 100%">
                                                 <thead>
                                                     <tr>
-                                                        <th>ID No</th>
-                                                        <th>Student Name </th>
-                                                        <th>Father Name </th>
-                                                        <th>Gender</th>
-                                                        <th>Roll</th>
+                                                        <th>{{ __('admin.id_no') }}</th>
+                                                        <th>{{ __('admin.student_name') }} </th>
+                                                        <th>{{ __('admin.father_name') }} </th>
+                                                        <th>{{ __('admin.gender') }}</th>
+                                                        <th>{{ __('admin.roll') }}</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody id="roll-generate-tr">
@@ -101,7 +101,7 @@
 
                                     </div>
 
-                                    <input type="submit" class="btn btn-primary" value="Roll Generator">
+                                    <input type="submit" class="btn btn-primary" value="{{ __('admin.roll_generator') }}">
 
 
                                 </form>

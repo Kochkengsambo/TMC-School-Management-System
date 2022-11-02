@@ -29,32 +29,32 @@
 
                         <div class="box">
                             <div class="box-header with-border">
-                                <h3 class="box-title">Fee Amount Details</h3>
+                                <h5 class="box-title">{{ __('admin.fee_amount_details') }}</h5>
                                 <a href="{{ route('fee.amount.add') }}" style="float: right"
                                     class="btn btn-primary mb-5">
                                     <i class="mdi mdi-library-plus"></i>
-                                    <span>Add Fee Amount</span>
+                                    <span>{{ __('admin.add_fee_amount') }}</span>
                                 </a>
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body">
                                 <div class="table-responsive">
 
-                                    <h4><strong>Fee Category : </strong>{{ $detailsData['0']['fee_category']['name'] }}</h4>
+                                    <h6><strong>{{ __('admin.fee_category') }} : </strong>{{ $detailsData['0']['fee_category']['name'] }}</h6>
 
                                     <table class="table table-bordered table-striped">
                                         <thead class="bg-success">
                                             <tr>
-                                                <th class="text-center" width="5%">SL</th>
-                                                <th>Class Name</th>
-                                                <th class="text-center" width="25%">Amount</th>
+                                                <th class="text-center" width="5%">{{ __('admin.sl') }}</th>
+                                                <th>{{ __('admin.class_name') }}</th>
+                                                <th class="text-center" width="25%">{{ __('admin.amount') }}</th>
                                             </tr>
                                         </thead>
                                         <tfoot>
                                             <tr>
-                                                <th class="text-center">SL</th>
-                                                <th>Class Name</th>
-                                                <th class="text-center">Amount</th>
+                                                <th class="text-center">{{ __('admin.sl') }}</th>
+                                                <th>{{ __('admin.class_name') }}</th>
+                                                <th class="text-center">{{ __('admin.amount') }}</th>
                                             </tr>
                                         </tfoot>
                                         <tbody>

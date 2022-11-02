@@ -29,10 +29,11 @@
                         <div class="box box-widget widget-user">
                             <!-- Add the bg color to the header using any of the bg-* classes -->
                             <div class="widget-user-header bg-black">
-                                <h6 class="widget-user-username">{{ __('admin.user_name') }} : {{ $user->name }}</h6>
+                                <h6 class="widget-user-desc">
+                                    {{ __('admin.user_name') }} :<strong> {{ $user->name }}</strong></h6>
 
-                                <a href="{{ route('profile.edit') }}" style="float: right"
-                                    class="btn btn-primary mb-5">{{ __('admin.edit_user') }}</a>
+                                <a href="{{ route('profile.edit') }}" style="float: right" class="btn btn-primary mb-5">
+                                    <i class="fa fa-edit" aria-hidden="true"></i>  {{ __('admin.edit_user') }}</a>
 
                                 <h6 class="widget-user-desc">{{ __('admin.user_type') }} : {{ $user->usertype }}</h6>
                                 <h6 class="widget-user-desc">{{ __('admin.user_email') }} : {{ $user->email }}</h6>
@@ -40,7 +41,7 @@
                             </div>
                             <div class="widget-user-image">
                                 <img class="rounded-circle"
-                                    src="{{ (!empty($user->image)) ? url('upload/user_images/' . $user->image) : url('upload/no_image.jpg') }}"
+                                    src="{{ !empty($user->image) ? url('upload/user_images/' . $user->image) : url('upload/no_image.jpg') }}"
                                     alt="User Avatar">
                             </div>
                             <div class="box-footer">

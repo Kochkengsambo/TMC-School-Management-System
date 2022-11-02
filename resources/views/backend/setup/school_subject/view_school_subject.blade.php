@@ -29,11 +29,11 @@
 
                         <div class="box">
                             <div class="box-header with-border">
-                                <h3 class="box-title">School Subject List</h3>
+                                <h5 class="box-title">{{ __('admin.school_sub_list') }}</h5>
                                 <a href="{{ route('school.subject.add') }}" style="float: right"
                                     class="btn btn-primary mb-5">
                                     <i class="mdi mdi-library-plus"></i>
-                                    <span>Add School Subject</span>
+                                    <span>{{ __('admin.add_school_sub') }}</span>
                                 </a>
                             </div>
                             <!-- /.box-header -->
@@ -42,16 +42,16 @@
                                     <table id="example1" class="table table-bordered table-striped">
                                         <thead class="bg-secondary">
                                             <tr>
-                                                <th class="text-center" width="5%">SL</th>
-                                                <th>Name</th>
-                                                <th class="text-center" width="20%">Action</th>
+                                                <th class="text-center" width="10%">{{ __('admin.sl') }}</th>
+                                                <th>{{ __('admin.name') }}</th>
+                                                <th class="text-center" width="20%">{{ __('admin.action') }}</th>
                                             </tr>
                                         </thead>
                                         <tfoot>
                                             <tr>
-                                                <th class="text-center">SL</th>
-                                                <th>Name</th>
-                                                <th class="text-center">Action</th>
+                                                <th class="text-center">{{ __('admin.sl') }}</th>
+                                                <th>{{ __('admin.name') }}</th>
+                                                <th class="text-center">{{ __('admin.action') }}</th>
                                             </tr>
                                         </tfoot>
                                         <tbody>
@@ -61,11 +61,11 @@
                                                     <td>{{ $schoolSub->name }}</td>
                                                     <td class="text-center">
                                                         <a href="{{ route('school.subject.edit', $schoolSub->id) }}"
-                                                            class="btn btn-primary mb-5"><i
-                                                                class="mdi mdi-account-edit"></i>Edite</a>
+                                                            class="btn btn-primary mb-5">
+                                                            <i class="fa fa-edit" aria-hidden="true"></i></a>
                                                         <a href="{{ route('school.subject.delete', $schoolSub->id) }}"
-                                                            class="btn btn-danger mb-5" id="delete"><i
-                                                                class="mdi mdi-account-remove"></i>Delete</a>
+                                                            class="btn btn-danger mb-5" id="delete">
+                                                            <i class="fa fa-trash-o" aria-hidden="true"></i></a>
 
 
                                                     </td>

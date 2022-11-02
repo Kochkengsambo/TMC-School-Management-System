@@ -29,36 +29,36 @@
 
                         <div class="box">
                             <div class="box-header with-border">
-                                <h3 class="box-title">Assign Subject Details</h3>
+                                <h5 class="box-title">{{ __('admin.assign_sub_details') }}</h5>
                                 <a href="{{ route('assign.subject.add') }}" style="float: right"
                                     class="btn btn-primary mb-5">
                                     <i class="mdi mdi-library-plus"></i>
-                                    <span>Add Assign Subject</span>
+                                    <span>{{ __('admin.add_assign_sub') }}</span>
                                 </a>
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body">
                                 <div class="table-responsive">
 
-                                    <h4><strong>Assign Subject : </strong>{{ $detailsData['0']['student_class']['name'] }}</h4>
+                                    <h6><strong>{{ __('admin.assign_subject') }} : </strong>{{ $detailsData['0']['student_class']['name'] }}</h6>
 
                                     <table class="table table-bordered table-striped">
                                         <thead class="bg-success">
                                             <tr>
-                                                <th class="text-center" width="5%">SL</th>
-                                                <th class="text-center" width="15%">Subject</th>
-                                                <th class="text-center" width="15%">Full Mark</th>
-                                                <th class="text-center" width="15%">Pass Mark</th>
-                                                <th class="text-center" width="15%">Subjective Mark</th>
+                                                <th class="text-center" width="5%">{{ __('admin.sl') }}</th>
+                                                <th class="text-center" width="15%">{{ __('admin.subject') }}</th>
+                                                <th class="text-center" width="15%">{{ __('admin.full_mark') }}</th>
+                                                <th class="text-center" width="15%">{{ __('admin.pass_mark') }}</th>
+                                                <th class="text-center" width="15%">{{ __('admin.subjective_mark') }}</th>
                                             </tr>
                                         </thead>
                                         <tfoot>
                                             <tr>
-                                                <th class="text-center" width="5%">SL</th>
-                                                <th class="text-center" width="15%">Subject</th>
-                                                <th class="text-center" width="15%">Full Mark</th>
-                                                <th class="text-center" width="15%">Pass Mark</th>
-                                                <th class="text-center" width="15%">Subjective Mark</th>
+                                                <th class="text-center" width="5%">{{ __('admin.sl') }}</th>
+                                                <th class="text-center" width="15%">{{ __('admin.subject') }}</th>
+                                                <th class="text-center" width="15%">{{ __('admin.full_mark') }}</th>
+                                                <th class="text-center" width="15%">{{ __('admin.pass_mark') }}</th>
+                                                <th class="text-center" width="15%">{{ __('admin.subjective_mark') }}</th>
                                             </tr>
                                         </tfoot>
                                         <tbody>
