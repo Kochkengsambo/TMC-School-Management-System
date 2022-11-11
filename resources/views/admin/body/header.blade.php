@@ -61,18 +61,6 @@
                         </a>
 
                     </div>
-
-                    {{-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        {{ Config::get('languages')[App::getLocale()] }}
-                    </a>
-                    <div class="dropdown-menu search-bar" aria-labelledby="navbarDropdownMenuLink">
-                    @foreach (Config::get('languages') as $lang => $language)
-                        @if ($lang != App::getLocale())
-                                <a class="dropdown-item" href="#"> Lenguache</a>
-                                <a class="dropdown-item" href="#"> Lenguache</a>
-                        @endif
-                    @endforeach
-                    </div> --}}
                 </li>
 
 

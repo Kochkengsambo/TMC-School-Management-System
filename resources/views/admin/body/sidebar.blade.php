@@ -114,14 +114,9 @@
                 <ul class="treeview-menu">
                     <li><a href="{{ route('student.registration.view') }}"><i class="ti-more"></i>{{ __('admin.student_registration') }}</a></li>
                     <li><a href="{{ route('roll.generate.view') }}"><i class="ti-more"></i>{{ __('admin.roll_generate') }}</a></li>
-                    {{-- <li><a href="{{ route('student.group.view') }}"><i class="ti-more"></i>Student Group</a></li> --}}
-                    {{-- <li><a href="{{ route('student.shift.view') }}"><i class="ti-more"></i>Student Shift</a></li> --}}
-                    {{-- <li><a href="{{ route('fee.category.view') }}"><i class="ti-more"></i>Fee Category</a></li> --}}
-                    {{-- <li><a href="{{ route('fee.amount.view') }}"><i class="ti-more"></i>Fee Category Amount</a></li> --}}
-                    {{-- <li><a href="{{ route('exam.type.view') }}"><i class="ti-more"></i>Exam Type</a></li> --}}
-                    {{-- <li><a href="{{ route('school.subject.view') }}"><i class="ti-more"></i>School Subject</a></li> --}}
-                    {{-- <li><a href="{{ route('assign.subject.view') }}"><i class="ti-more"></i>Assign Subject</a></li> --}}
-                    {{-- <li><a href="{{ route('designation.view') }}"><i class="ti-more"></i>Designation</a></li> --}}
+                    <li><a href="{{ route('view.registration.fee') }}"><i class="ti-more"></i>{{ __('admin.reg_fee') }} </a></li>
+                    {{-- <li><a href="{{ route('monthly.fee.view') }}"><i class="ti-more"></i>Monthly Fee </a></li>
+                    <li><a href="{{ route('exam.fee.view') }}"><i class="ti-more"></i>Exam Fee </a></li> --}}
                 </ul>
             </li>
 

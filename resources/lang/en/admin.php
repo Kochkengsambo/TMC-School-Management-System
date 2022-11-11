@@ -141,6 +141,9 @@ return [
      'edit_student'                  => 'Edit Student',
      'roll_generator'                => 'Roll Generator',
 
+      #=================[Student Management]==================
+      'reg_fee'                      => 'Registration Fee',
+
 
 
 
