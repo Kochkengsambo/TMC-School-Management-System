@@ -143,6 +143,7 @@ return [
 
       #=================[Student Management]==================
       'reg_fee'                      => 'Registration Fee',
+      'monthly_fee'                  => 'Monthly Fee',
 
 
 

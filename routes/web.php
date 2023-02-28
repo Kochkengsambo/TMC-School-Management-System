@@ -6,14 +6,17 @@ use App\Http\Controllers\Changelanguage;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\ProfileController;
+use App\Http\Controllers\backend\SiteprofileController;
 use App\Http\Controllers\Backend\Setup\ExamTypeController;
 use App\Http\Controllers\Backend\Setup\FeeAmountController;
+use App\Http\Controllers\Backend\Student\ExamFeeController;
 use App\Http\Controllers\Backend\Setup\DesignationController;
 use App\Http\Controllers\Backend\Setup\FeeCategoryController;
 use App\Http\Controllers\Backend\Setup\StudentSiftController;
 use App\Http\Controllers\Backend\Setup\StudentYearController;
 use App\Http\Controllers\Backend\Setup\StudentClassController;
 use App\Http\Controllers\Backend\Setup\StudentGroupController;
+use App\Http\Controllers\Backend\Student\MonthlyFeeController;
 use App\Http\Controllers\Backend\Setup\AssignSubjectController;
 use App\Http\Controllers\Backend\Setup\SchoolSubjectController;
 use App\Http\Controllers\Backend\Student\StudentRollController;
@@ -54,6 +57,13 @@ Route::middleware([
 Route::get('/set-language/{lang}', [Changelanguage::class, 'setLocale'])->name('set-language');
 
 Route::get('/admin/logout', [AdminController::class, 'Logout'])->name('admin.logout');
+
+/// Site Profile Route
+Route::prefix('siteprofiles')->group(function () {
+        Route::get('siteprofile/view', [SiteprofileController::class, 'index'])->name('siteprofiles');
+        Route::post('siteprofile/store', [SiteprofileController::class, 'store'])->name('siteprofile.store');
+    }
+);
 
 #=================================Manage User route==================================
 Route::prefix('users')->group(function () {
@@ -166,4 +176,15 @@ Route::prefix('students')->group(function () {
     Route::get('/reg/fee/view', [RegistrationFeeController::class, 'RegFeeView'])->name('view.registration.fee');
     Route::get('/reg/fee/classwisedata', [RegistrationFeeController::class, 'RegFeeClassData'])->name('student.registration.fee.classwise.get');
     Route::get('/reg/fee/payslip', [RegistrationFeeController::class, 'RegFeePayslip'])->name('student.registration.fee.payslip');
+
+    // Monthly Fee Routes
+    Route::get('/monthly/fee/view', [MonthlyFeeController::class, 'MonthlyFeeView'])->name('monthly.fee.view');
+    Route::get('/monthly/fee/classwisedata', [MonthlyFeeController::class, 'MonthlyFeeClassData'])->name('student.monthly.fee.classwise.get');
+    Route::get('/monthly/fee/payslip', [MonthlyFeeController::class, 'MonthlyFeePayslip'])->name('student.monthly.fee.payslip');
+
+    // Exam Fee Routes
+    Route::get('/exam/fee/view', [ExamFeeController::class, 'ExamFeeView'])->name('exam.fee.view');
+    Route::get('/exam/fee/classwisedata', [ExamFeeController::class, 'ExamFeeClassData'])->name('student.exam.fee.classwise.get');
+    Route::get('/exam/fee/payslip', [ExamFeeController::class, 'ExamFeePayslip'])->name('student.exam.fee.payslip');
+
 });

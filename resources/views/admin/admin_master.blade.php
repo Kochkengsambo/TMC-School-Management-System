@@ -1,3 +1,24 @@
+@php
+// use App\Helpers\MyHelper;
+// $UserPermision = MyHelper::UserPermision();
+// $checkisadmin = MyHelper::checkisadmin();
+
+$siteprofile = Session::get('siteprofile');
+
+$icon = '';
+$logo = '';
+$title = 'TMC Admin';
+if ($siteprofile) {
+    if (file_exists($siteprofile->icon)) {
+        $icon = asset($siteprofile->icon);
+    }
+    if (file_exists($siteprofile->logo)) {
+        $logo = asset($siteprofile->logo);
+    }
+    $title = $siteprofile->site_name;
+}
+
+@endphp
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,9 +28,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="{{ asset('backend/images/logo-dark.png') }}">
-
-    <title>TMC School</title>
+    {{-- <link rel="icon" href="{{ asset('backend/images/logo-dark.png') }}"> --}}
+    {{-- <title>TMC School</title> --}}
+    <link rel="icon" href="{{ $icon . '?' . strtotime(date('Y-m-d H')) }}" type="image/x-png">
+    <title>{{ $title }} @yield('title')</title>
 
     <!-- Vendors Style-->
     <link rel="stylesheet" href="{{ asset('backend/css/vendors_css.css') }}">

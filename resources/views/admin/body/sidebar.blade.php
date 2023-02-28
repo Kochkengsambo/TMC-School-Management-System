@@ -1,6 +1,22 @@
 @php
     $prefix = Request::route()->getprefix();
     $route = Route::current()->getName();
+
+    $siteprofile = Session::get('siteprofile');
+
+    $icon = '';
+    $logo = '';
+    $title = 'TMC Admin';
+    if ($siteprofile) {
+        if (file_exists($siteprofile->icon)) {
+            $icon = asset($siteprofile->icon);
+        }
+        if (file_exists($siteprofile->logo)) {
+            $logo = asset($siteprofile->logo);
+        }
+        $title = $siteprofile->site_name;
+    }
+
 @endphp
 {{-- @dd($route) --}}
 <link href='https://fonts.googleapis.com/css?family=Khmer' rel='stylesheet'>
@@ -26,9 +42,11 @@
                 <a href="index.html">
                     <!-- logo for regular state and mobile devices -->
                     <div class="d-flex align-items-center justify-content-center">
-                        <img src="{{ asset('backend/images/logo-dark.png') }}" alt="">
+                        {{-- <img src="{{ asset('backend/images/logo-dark.png') }}" alt=""> --}}
+                        <a class="navbar-brand" href="{{ url('/dashboard') }}" style="padding: 0px 15px !important;">
+                            <img src="{{ $logo }}" alt="" style="max-height: 67px; margin-bottom: -30px;">
                         {{-- <h3><b>TMC</b> Admin</h3> --}}
-                        <h3 style="font-size: 12px;"><b style="font-family: Khmer OS Muol Light;">សាកលវិទ្យាល័យបៀលប្រាយ</b><br><b style="font-family: Khmer OS Battambong; font-size: 14px;">Build Bright University</b></h3>
+                        {{-- <h3 style="font-size: 12px;"><b style="font-family: Khmer OS Muol Light;">សាកលវិទ្យាល័យបៀលប្រាយ</b><br><b style="font-family: Khmer OS Battambong; font-size: 14px;">Build Bright University</b></h3> --}}
                         {{-- <h3 style="font-size: 18px;">Build Bright University</h3> --}}
                     </div>
                 </a>
@@ -115,10 +133,27 @@
                     <li><a href="{{ route('student.registration.view') }}"><i class="ti-more"></i>{{ __('admin.student_registration') }}</a></li>
                     <li><a href="{{ route('roll.generate.view') }}"><i class="ti-more"></i>{{ __('admin.roll_generate') }}</a></li>
                     <li><a href="{{ route('view.registration.fee') }}"><i class="ti-more"></i>{{ __('admin.reg_fee') }} </a></li>
-                    {{-- <li><a href="{{ route('monthly.fee.view') }}"><i class="ti-more"></i>Monthly Fee </a></li>
-                    <li><a href="{{ route('exam.fee.view') }}"><i class="ti-more"></i>Exam Fee </a></li> --}}
+                    <li><a href="{{ route('monthly.fee.view') }}"><i class="ti-more"></i>Monthly Fee </a></li>
+                    {{-- <li><a href="{{ route('exam.fee.view') }}"><i class="ti-more"></i>Exam Fee </a></li> --}}
                 </ul>
             </li>
+
+             {{-- Site Profile --}}
+             <li class="treeview {{ $prefix == '/siteprofiles' ? 'active' : '' }}">
+                <a href="#">
+                    <i data-feather="settings"></i></i> <span> Settings</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="{{ $route == 'siteprofiles' ? 'active' : '' }}">
+                        <a href="{{ route('siteprofiles') }}"><i class="ti-more"></i>Site Profile</a>
+                    </li>
+
+                </ul>
+            </li>
+
 
             {{-- <li class="treeview">
                 <a href="#">
